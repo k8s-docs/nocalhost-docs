@@ -1,0 +1,152 @@
+# Project information
+site_name: nocalhost 文档
+site_url: https://k8s-docs.github.io/nocalhost-docs/
+site_author: Martin Donath
+site_description: nocalhost
+docs_dir: source
+site_dir: docs
+
+# Repository
+repo_name: k8s-docs/nocalhost-docs
+repo_url: https://k8s-docs.github.io/nocalhost-docs
+
+# Copyright
+copyright: Copyright &copy; 2016 - 2022 Martin Donath
+
+# Configuration
+theme:
+  name: material
+  # custom_dir: material/.overrides
+  features:
+    # - announce.dismiss
+    - content.code.annotate
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
+
+# Plugins
+plugins:
+  - search
+  # - redirects:
+  #     redirect_maps:
+  #       changelog/insiders.md: insiders/changelog.md
+  #       conventions.md: philosophy.md
+  #       reference/abbreviations.md: reference/tooltips.md
+  #       reference/meta-tags.md: reference/index.md
+  #       reference/variables.md: https://mkdocs-macros-plugin.readthedocs.io/
+  #       sponsorship.md: insiders/index.md
+  #       upgrading.md: upgrade.md
+  - minify:
+      minify_html: true
+
+# Customization
+extra:
+  # analytics:
+  #   provider: google
+  #   property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/k8s-docs
+    - icon: fontawesome/brands/gitter
+      link: https://gitter.im/k8s-docs/nocalhost-docs
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/r/k8s-docs/nocalhost-docs/
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/nocalhost-docs/
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/k8s-docs
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: k8s-docs
+      repo: nocalhost-docs
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+nav:
+  - 主页:
+      - 介绍: README.md
+      - 快速入门: quick-start.md
+      - 安装: installation.md
+  - 参考:
+      - 配置: reference/nh-config.md
+  - practice:
+      - kubesphere: practice/kubesphere.md
+  - guides:
+      - hot-reload: guides/hot-reload.md
+  - faq: faq/faq.md
+  - 配置:
+      - config: config/config-en.md
+  - cli:
+      - cli: cli/cli-install.md
+  - 更新日志:
+      - 0.6.x: changelogs/0.6.x.md
+      - 0.5.x: changelogs/0.5.x.md
+      - 0.4.x: changelogs/0.4.x.md

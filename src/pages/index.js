@@ -5,7 +5,7 @@ import styles from "./index.module.scss";
 import VideoModal from "../components/VideoModal";
 import Translate from "@docusaurus/Translate";
 import Head from "@docusaurus/Head";
-import LayoutProviders from "@theme/LayoutProviders";
+import LayoutProviders from "@theme/Layout/Provider";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 function newUrl(record) {
@@ -70,23 +70,12 @@ export default function Home() {
       <Head>
         <title>{siteConfig.title}</title>
         <meta property="og:title" content={siteConfig.title} />
-        {description != null && (
-          <meta name="description" content={description} />
-        )}
-        {description != null && (
-          <meta name="twitter:description" content={description} />
-        )}
-        {description != null && (
-          <meta property="og:description" content={description} />
-        )}
+        {description != null && <meta name="description" content={description} />}
+        {description != null && <meta name="twitter:description" content={description} />}
+        {description != null && <meta property="og:description" content={description} />}
       </Head>
       <div className={styles.mdContainer}>
-        {showVideoModal && (
-          <VideoModal
-            setShowVideoModa={setShowVideoModa}
-            isZh={isZh}
-          ></VideoModal>
-        )}
+        {showVideoModal && <VideoModal setShowVideoModa={setShowVideoModa} isZh={isZh}></VideoModal>}
         <header className={styles.mdHeader}>
           <nav className={clsx(styles.mdGridTop, styles.mdHeaderNav)}>
             <div>
@@ -103,20 +92,12 @@ export default function Home() {
                 </li>
 
                 <li className={clsx(styles.mdTabsItem, styles.xdHide)}>
-                  <a
-                    href={
-                      isZh ? "/zh-CN/docs/introduction" : "/docs/introduction"
-                    }
-                  >
+                  <a href={isZh ? "/zh-CN/docs/introduction" : "/docs/introduction"}>
                     <Translate>Documentation</Translate>
                   </a>
                 </li>
                 <li className={clsx(styles.mdTabsItem, styles.xdHide)}>
-                  <a
-                    href={
-                      isZh ? "/zh-CN/docs/quick-start" : "/docs/quick-start"
-                    }
-                  >
+                  <a href={isZh ? "/zh-CN/docs/quick-start" : "/docs/quick-start"}>
                     <Translate>Quick Start</Translate>
                   </a>
                 </li>
@@ -131,9 +112,7 @@ export default function Home() {
                   </a>
                 </li>
                 <li className={clsx(styles.mdTabsItem)}>
-                  <a href={isZh ? "/" : "/zh-CN"}>
-                    {isZh ? "English" : "中文"}
-                  </a>
+                  <a href={isZh ? "/" : "/zh-CN"}>{isZh ? "English" : "中文"}</a>
                 </li>
                 <li className={clsx(styles.mdTabsItem, styles.xdHide)}>
                   <a
@@ -142,10 +121,7 @@ export default function Home() {
                     title="Material for MkDocs Insiders"
                     rel="noreferrer"
                   >
-                    <img
-                      className={styles.githubLogo}
-                      src="img/home/mark-github.svg"
-                    ></img>
+                    <img className={styles.githubLogo} src="img/home/mark-github.svg"></img>
                   </a>
                 </li>
               </ul>
@@ -172,27 +148,18 @@ export default function Home() {
                   <div className={styles.txHeroElementBubbles}></div>
                 </div>
               </div>
-              <div
-                className={clsx(styles.txGeroContent, styles.txGeroContent1)}
-              >
+              <div className={clsx(styles.txGeroContent, styles.txGeroContent1)}>
                 <div className={styles.headerContent}>
                   <h1>
                     <Translate>Goodbye, localhost!</Translate>
                   </h1>
 
                   <p>
-                    <strong>Nocalhost </strong>{" "}
-                    <Translate>
-                      is a cloud-native development tool based on IDE
-                    </Translate>
+                    <strong>Nocalhost </strong> <Translate>is a cloud-native development tool based on IDE</Translate>
                   </p>
                   <div className={styles.txHeroContentBtns}>
                     <div className={styles.startBtn}>
-                      <a
-                        href={
-                          isZh ? "/zh-CN/docs/quick-start" : "/docs/quick-start"
-                        }
-                      >
+                      <a href={isZh ? "/zh-CN/docs/quick-start" : "/docs/quick-start"}>
                         <Translate>Quick Start</Translate>
                       </a>
                     </div>
@@ -204,10 +171,7 @@ export default function Home() {
                         title="Material for MkDocs Insiders"
                         rel="noreferrer"
                       >
-                        <img
-                          className={styles.githubLogo}
-                          src="img/home/mark-github.svg"
-                        ></img>
+                        <img className={styles.githubLogo} src="img/home/mark-github.svg"></img>
                         GitHub
                       </a>
                     </div>
@@ -217,9 +181,7 @@ export default function Home() {
                   <canvas id="canvas3d" className={styles.canvas3d}></canvas>
                 </div>
               </div>
-              <div
-                className={clsx(styles.txGeroContent, styles.txHeroContent2)}
-              >
+              <div className={clsx(styles.txGeroContent, styles.txHeroContent2)}>
                 <div className={clsx(styles.h2, styles.titleFlex)}>
                   <span className={styles.circle}></span>
                   <h2>
@@ -231,10 +193,7 @@ export default function Home() {
                     <Translate>Nocalhost Overview</Translate>
                   </div>
                   <div className={styles.videoClickBox}>
-                    <img
-                      src="img/home/video-play.svg"
-                      onClick={setShowVideoModa}
-                    ></img>
+                    <img src="img/home/video-play.svg" onClick={setShowVideoModa}></img>
                     <div className={styles.text}>
                       <Translate>Click to watch the video</Translate>
                     </div>
@@ -253,19 +212,15 @@ export default function Home() {
                       </div>
                       <p className={styles.detail}>
                         <Translate>
-                          Code changes can instantly synchronize from IDE to
-                          cloud, see changes under seconds, without image
-                          commit, push or pull cycles.
+                          Code changes can instantly synchronize from IDE to cloud, see changes under seconds, without
+                          image commit, push or pull cycles.
                         </Translate>
                       </p>
                       <div className={styles.icon}>
                         <img src="img/home/section2-images-1.png"></img>
                       </div>
                     </div>
-                    <div
-                      className={styles.cardsGroupSection}
-                      style={{ backgroundColor: "#0f2b34" }}
-                    >
+                    <div className={styles.cardsGroupSection} style={{ backgroundColor: "#0f2b34" }}>
                       <strong>
                         <Translate>It&apos;s a</Translate>
                       </strong>
@@ -276,32 +231,26 @@ export default function Home() {
                       </div>
                       <p className={styles.detail}>
                         <Translate>
-                          Developers can share the same development environment
-                          across the team, enjoying team collaboration.
+                          Developers can share the same development environment across the team, enjoying team
+                          collaboration.
                         </Translate>
                       </p>
                       <div className={styles.icon}>
                         <img src="img/home/section2-images-2.png"></img>
                       </div>
                     </div>
-                    <div
-                      className={styles.cardsGroupSection}
-                      style={{ backgroundColor: "#0f2b34" }}
-                    >
+                    <div className={styles.cardsGroupSection} style={{ backgroundColor: "#0f2b34" }}>
                       <strong>
                         <Translate>It&apos;s a</Translate>
                       </strong>
                       <div className={styles.title}>
                         <p>
-                          <Translate>
-                            Extension Toolsets of Kubernetes
-                          </Translate>
+                          <Translate>Extension Toolsets of Kubernetes</Translate>
                         </p>
                       </div>
                       <p className={styles.detail}>
                         <Translate>
-                          Nocalhost can help developers to build Kubernetes
-                          applications much easier and faster.
+                          Nocalhost can help developers to build Kubernetes applications much easier and faster.
                         </Translate>
                       </p>
                       <div className={styles.icon}>
@@ -309,10 +258,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div
-                      className={clsx(
-                        styles.cardsGroupSection3,
-                        styles.cardsGroupSection
-                      )}
+                      className={clsx(styles.cardsGroupSection3, styles.cardsGroupSection)}
                       style={{ backgroundColor: "#fff" }}
                     >
                       <strong>
@@ -320,16 +266,13 @@ export default function Home() {
                       </strong>
                       <div className={styles.title}>
                         <p>
-                          <Translate>
-                            Spotlight On Explore MicroServices
-                          </Translate>
+                          <Translate>Spotlight On Explore MicroServices</Translate>
                         </p>
                       </div>
                       <p className={styles.detail}>
                         <Translate>
-                          Developers can directly develop and debug remote
-                          designated microservices under the complex framework
-                          through Nocalhost.
+                          Developers can directly develop and debug remote designated microservices under the complex
+                          framework through Nocalhost.
                         </Translate>
                       </p>
                       <div className={styles.icon}>
@@ -339,17 +282,13 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div
-                className={clsx(styles.txGeroContent, styles.txHeroContent3)}
-              >
+              <div className={clsx(styles.txGeroContent, styles.txHeroContent3)}>
                 <div className={styles.topImg}></div>
                 <div className={styles.bottomImg}></div>
                 <div className={styles.h2}>
                   <span className={styles.circle}></span>
                   <h2>
-                    <Translate>
-                      Nocalhost is a new cloud-native development tool
-                    </Translate>
+                    <Translate>Nocalhost is a new cloud-native development tool</Translate>
                   </h2>
                 </div>
                 <div className={styles.content}>
@@ -364,41 +303,26 @@ export default function Home() {
                           <Translate>Dev Mode</Translate>
                         </div>
                         <p>
-                          <Translate>
-                            Everyone codes in an isolated way.
-                          </Translate>
+                          <Translate>Everyone codes in an isolated way.</Translate>
                         </p>
                       </div>
                     </div>
                     <div className={styles.devModeContent}>
-                      <div
-                        className={clsx(styles.showImg, styles.localhostShow)}
-                      >
+                      <div className={clsx(styles.showImg, styles.localhostShow)}>
                         <img src="img/home/section3-localhost-image.png"></img>
                       </div>
                       <ul className={styles.localhostList}>
                         <li>
-                          <Translate>
-                            Hard to develop large applications with limited
-                            local resources
-                          </Translate>
+                          <Translate>Hard to develop large applications with limited local resources</Translate>
                         </li>
                         <li>
-                          <Translate>
-                            Difficult to setup and maintain the development
-                            environment
-                          </Translate>
+                          <Translate>Difficult to setup and maintain the development environment</Translate>
                         </li>
                         <li>
-                          <Translate>
-                            Difficult for collaborative debugging
-                          </Translate>
+                          <Translate>Difficult for collaborative debugging</Translate>
                         </li>
                         <li>
-                          <Translate>
-                            Gap between development environment and production
-                            environment
-                          </Translate>
+                          <Translate>Gap between development environment and production environment</Translate>
                         </li>
                       </ul>
                     </div>
@@ -417,35 +341,28 @@ export default function Home() {
                         </div>
                         <p>
                           <Translate>
-                            Nocalhost can empower any Kubernetes Cluster and
-                            upgrade it to a collaborative development
+                            Nocalhost can empower any Kubernetes Cluster and upgrade it to a collaborative development
                             environment for developers.
                           </Translate>
                         </p>
                       </div>
                     </div>
                     <div className={styles.devModeContent}>
-                      <div
-                        className={clsx(styles.showImg, styles.nolocalhostShow)}
-                      >
+                      <div className={clsx(styles.showImg, styles.nolocalhostShow)}>
                         <img src="img/home/section3-nocalhost-image.png"></img>
                       </div>
                       <ul className={styles.nocalhostList}>
                         <li>
                           <Translate>
-                            Easy to handle large application development with
-                            flexible cloud resources
+                            Easy to handle large application development with flexible cloud resources
                           </Translate>
                         </li>
                         <li>
-                          <Translate>
-                            Environment provisioning on demand
-                          </Translate>
+                          <Translate>Environment provisioning on demand</Translate>
                         </li>
                         <li>
                           <Translate>
-                            Easy to share the same development environment and
-                            collaborative debugging
+                            Easy to share the same development environment and collaborative debugging
                           </Translate>
                         </li>
                         <li>
@@ -456,9 +373,7 @@ export default function Home() {
                   </section>
                 </div>
               </div>
-              <div
-                className={clsx(styles.txGeroContent, styles.txHeroContent4)}
-              >
+              <div className={clsx(styles.txGeroContent, styles.txHeroContent4)}>
                 <div className={styles.h2}>
                   <span className={styles.circle}></span>
                   <h2>
@@ -468,18 +383,11 @@ export default function Home() {
 
                 <p>
                   <Translate>
-                    Explore the difference between development locally and
-                    development on the cloud.
+                    Explore the difference between development locally and development on the cloud.
                   </Translate>
                 </p>
                 <div className={styles.table}>
-                  <img
-                    src={
-                      isZh
-                        ? "img/home/section4-table-zh.png"
-                        : "img/home/section4-table.svg"
-                    }
-                  ></img>
+                  <img src={isZh ? "img/home/section4-table-zh.png" : "img/home/section4-table.svg"}></img>
                   {/* <img src='img/home/section4-table.svg'></img> */}
                 </div>
               </div>
@@ -492,81 +400,55 @@ export default function Home() {
                 </div>
                 <div className={styles.whoUseCardBox}>
                   <div className={styles.whoUseCar}>
-                    <img
-                      src="img/home/consumer-uisee.png"
-                      className={styles.logo}
-                    ></img>
+                    <img src="img/home/consumer-uisee.png" className={styles.logo}></img>
                     <div className={styles.title}>
                       <Translate id="uisee.title">UISEE </Translate>
                     </div>
                     <div className={styles.text}>
                       <Translate id="uisee.info">
-                        UISEE is China's leading autonomous driving company,
-                        using Nocalhost Server to pull up a development
-                        environment for AI applications with one click, using
-                        IDE plug-ins and one-click debugging to shorten the
-                        development cycle.
+                        UISEE is China's leading autonomous driving company, using Nocalhost Server to pull up a
+                        development environment for AI applications with one click, using IDE plug-ins and one-click
+                        debugging to shorten the development cycle.
                       </Translate>
                     </div>
                   </div>
                   <div className={styles.whoUseCar}>
-                    <img
-                      src="img/home/consumer-kuaikan.png"
-                      className={styles.logo}
-                    ></img>
+                    <img src="img/home/consumer-kuaikan.png" className={styles.logo}></img>
                     <div className={styles.title}>
                       <Translate id="kuaikan.title">KuaiKan </Translate>
                     </div>
                     <div className={styles.text}>
                       <Translate id="kuaikan.info">
-                        KuaiKan is a national comic IP platform and sharing
-                        community for young people in China, with over 340
-                        million users. Use Nocalhost Server to manage the
-                        development environment based on Namespace isolation,
-                        and use IDE plug-ins to shorten the development cycle
-                        feedback.
+                        KuaiKan is a national comic IP platform and sharing community for young people in China, with
+                        over 340 million users. Use Nocalhost Server to manage the development environment based on
+                        Namespace isolation, and use IDE plug-ins to shorten the development cycle feedback.
                       </Translate>
                     </div>
                   </div>
                   <div className={styles.whoUseCar}>
-                    <img
-                      src="img/home/consumer-2.png"
-                      className={styles.logo}
-                    ></img>
+                    <img src="img/home/consumer-2.png" className={styles.logo}></img>
                     <div className={styles.title}>
-                      <Translate id="HongyaTechnology.title">
-                        Hongya Technology
-                      </Translate>
+                      <Translate id="HongyaTechnology.title">Hongya Technology</Translate>
                     </div>
                     <div className={styles.text}>
                       <Translate id="HongyaTechnology.info">
-                        Hongya Technology is a technology company that provides
-                        superior services for information technology-related
-                        majors. Its business includes teaching products and
-                        school-enterprise cooperation. It uses Nocalhost to
-                        improve business R&D efficiency (green pepper
-                        classroom).
+                        Hongya Technology is a technology company that provides superior services for information
+                        technology-related majors. Its business includes teaching products and school-enterprise
+                        cooperation. It uses Nocalhost to improve business R&D efficiency (green pepper classroom).
                       </Translate>
                     </div>
                   </div>
                   <div className={styles.whoUseCar}>
-                    <img
-                      src="img/home/consumer-4.png"
-                      className={styles.logo}
-                    ></img>
+                    <img src="img/home/consumer-4.png" className={styles.logo}></img>
                     <div className={styles.title}>
-                      <Translate id="XiaoyingTechnology.title">
-                        Xiaoying Technology
-                      </Translate>
+                      <Translate id="XiaoyingTechnology.title">Xiaoying Technology</Translate>
                     </div>
                     <div className={styles.text}>
                       <Translate id="XiaoyingTechnology.info">
-                        is an Internet company focusing on mobile video creation
-                        tools and services. The company was established in June
-                        2012 and is headquartered in Hangzhou. Round of
-                        financing. Use Nocalhost to improve the research and
-                        development efficiency of machine learning projects in
-                        the K8s environment.
+                        is an Internet company focusing on mobile video creation tools and services. The company was
+                        established in June 2012 and is headquartered in Hangzhou. Round of financing. Use Nocalhost to
+                        improve the research and development efficiency of machine learning projects in the K8s
+                        environment.
                       </Translate>
                     </div>
                   </div>
@@ -575,17 +457,11 @@ export default function Home() {
               <div className={styles.startBtnSection}>
                 <div className={styles.bottomBanner}>
                   <h3>
-                    <Translate>
-                      Developing Cloud-Native App with Nocalhost
-                    </Translate>
+                    <Translate>Developing Cloud-Native App with Nocalhost</Translate>
                   </h3>
                   <div className={styles.bigStartBtnBox}>
                     <div className={styles.bigStartBtn}>
-                      <a
-                        href={
-                          isZh ? "/zh-CN/docs/quick-start" : "/docs/quick-start"
-                        }
-                      >
+                      <a href={isZh ? "/zh-CN/docs/quick-start" : "/docs/quick-start"}>
                         <Translate>Quick start</Translate>
                       </a>
                     </div>
@@ -599,9 +475,7 @@ export default function Home() {
           <div className={styles["cncf-box"]}>
             <h4 style={{ textAlign: "center" }}>
               Nocalhost is a &nbsp;
-              <a href="https://www.cncf.io">
-                Cloud Native Computing Foundation
-              </a>
+              <a href="https://www.cncf.io">Cloud Native Computing Foundation</a>
               &nbsp;sandbox project
             </h4>
             <img height="75px" src="img/cncf-color.svg" alt="CNCF" />
@@ -612,10 +486,7 @@ export default function Home() {
               <p>
                 <a href="https://coding.net">Coding.net</a>
                 &nbsp;&&nbsp;
-                <a href="https://github.com/nocalhost/nocalhost/graphs/contributors">
-                  Nocalhost Project Authors
-                </a>
-                © 2021
+                <a href="https://github.com/nocalhost/nocalhost/graphs/contributors">Nocalhost Project Authors</a>© 2021
               </p>
             </div>
           </div>
