@@ -1,6 +1,6 @@
 # Nocalhost Docs & Website
 
-> 又有使用 @docusaurus 构建特别复杂，需要安装繁多的 Js 开发组件，经常有安装连接失败，已经组件升级导致各种兼容问题，很难调试，
+> 由于使用 @docusaurus 构建特别复杂，需要安装繁多的 Js 开发组件，经常有安装连接失败，已经组件升级导致各种兼容问题，很难调试，
 > 最后改用快速高效 mkdocs
 
 This repository contains the source code of Nocalhost website and all documentations. It's built by [Docusaurus 2](https://docusaurus.io/).
