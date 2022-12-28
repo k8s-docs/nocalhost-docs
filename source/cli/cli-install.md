@@ -4,13 +4,13 @@ title: nhctl install
 
 Deploy Application
 
-## Usage
+## 用法
 
 ```
 nhctl install [NAME] [flags]
 ```
 
-## Flags
+## 标志
 
 ```
 Flags:
@@ -36,4 +36,3 @@ Global Flags:
       --kubeconfig string   the path of the kubeconfig file
   -n, --namespace string    kubernetes namespace
 ```
-

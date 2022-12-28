@@ -1,11 +1,9 @@
 # Amazon EKS
 
-:::note Requirements
-- 
-:::
+!!! note Requirements
+
+- :::
 
 ## Connect by KubeConfig
 
-
 ## FAQ
-

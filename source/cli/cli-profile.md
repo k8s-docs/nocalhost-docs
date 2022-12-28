@@ -17,13 +17,13 @@ Available Commands:
 
 Get a config item of Profile
 
-### Usage
+### 用法
 
 ```
 nhctl profile get [flags]
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:
@@ -43,13 +43,13 @@ Global Flags:
 
 Set a config item of Profile
 
-### Usage
+### 用法
 
 ```
 nhctl profile set [flags]
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:

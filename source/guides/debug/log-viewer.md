@@ -2,36 +2,14 @@
 title: Log Viewer
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import useBaseUrl from '@docusaurus/useBaseUrl';
+# 查看日志
 
-# View Logs
+Nocalhost 配备了内置的日志观看器，可帮助您在 IDE 中使用任何 Kubernetes 容器监视和调试问题。
 
-Nocalhost comes with a built-in log viewer, to helps you to monitor and debug issues with any Kubernetes containers right within your IDE.
+=== "vscode"
 
-<Tabs
-  defaultValue="vscode"
-  values={[
-    {label: 'VS Code', value: 'vscode'},
-    {label: 'JetBrains', value: 'jb'},
-  ]}>
-<TabItem value="vscode">
+    ![VS Code open log viewer](../../img/plugin/vs-log-viewer.gif)
 
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/plugin/vs-log-viewer.gif')} />
-  <figcaption>VS Code open log viewer</figcaption>
-</figure>
+=== "jb"
 
-</TabItem>
-  
-<TabItem value="jb">
-
-
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/plugin/jb-log-viewer.gif')} />
-  <figcaption>VS Code open log viewer</figcaption>
-</figure>
-
-</TabItem>
-</Tabs>
+    ![VS Code open log viewer](../../img/plugin/jb-log-viewer.gif)

@@ -4,13 +4,13 @@ title: nhctl version
 
 Get nhctl's version
 
-## Usage
+## 用法
 
 ```
 nhctl version [flags]
 ```
 
-## Flags
+## 标志
 
 ```
 Flags:

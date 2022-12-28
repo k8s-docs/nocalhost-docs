@@ -4,13 +4,13 @@ title: nhctl upgrade
 
 Upgrade k8s application
 
-## Usage
+## 用法
 
 ```
 nhctl upgrade [NAME] [flags]
 ```
 
-## Flags
+## 标志
 
 ```
 Flags:

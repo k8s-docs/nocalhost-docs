@@ -1,11 +1,9 @@
 # Tencent TKE
 
-:::note Requirements
-- 
-:::
+!!! note Requirements
+
+- :::
 
 ## Connect by KubeConfig
 
-
 ## FAQ
-

@@ -1,4 +1,4 @@
-# Nocalhost Config Specs
+# Nocalhost 配置规格
 
 ```yaml
 # Specify config properties
@@ -6,7 +6,6 @@
 # default value: {}
 # required
 configProperties:
-
   # config file version
   # type: string
   # default value: null
@@ -20,7 +19,6 @@ configProperties:
   envFile: env.dev
 
 application:
-
   # Application name
   # type: string(dns1123)
   # default value: null
@@ -68,8 +66,7 @@ application:
   # type: object[]
   # default value: []
   # optional
-  onPreInstall: 
-
+  onPreInstall:
     # Job yaml file, the relative path of the repo root
     # type: string
     # required
@@ -94,23 +91,23 @@ application:
     - key: DEBUG
       value: ${DEBUG:-true}
 
-  # Inject environment variable for all workload 
+  # Inject environment variable for all workload
   # type: object[]
   # default value: []
   # optional
-  env: 
+  env:
     - name: DEBUG
       value: ${DEBUG:-true}
     - name: DOMAIN
       value: "www.coding.com"
 
-  # Use envFile to inject environment variable for all workload 
+  # Use envFile to inject environment variable for all workload
   # If specify env and envFrom at the same time, then use intersection of them, and use env key as primary
   # type: object[]
   # default value: []
   # optional
-  envFrom: 
-    envFile: 
+  envFrom:
+    envFile:
       - path: dev.env
       - path: dev.env
 
@@ -119,7 +116,6 @@ application:
   # default value: []
   # optional
   services:
-
     # Name of service, the name of workload in cluster
     # type: string
     # default value: null
@@ -127,18 +123,17 @@ application:
     - name: e-coding
 
       # The Kubernetes Workloads type corresponding to the service
-      # type: select, options: deployment/statefulset/pod/job/cronjob/daemonset case insensitive 
+      # type: select, options: deployment/statefulset/pod/job/cronjob/daemonset case insensitive
       # default value: deployment
       # required
       serviceType: deployment
 
-      dependLabelSelector: 
-
+      dependLabelSelector:
         # Dependent Pods label selector (The service will not start until the Pods selected by selector being ready.)
         # type: string[]
         # default value: []
         # optional
-        pods: 
+        pods:
           - "name=mariadb"
           - "app.kubernetes.io/name=mariadb"
 
@@ -151,7 +146,6 @@ application:
           - "app.kubernetes.io/name=init-job"
 
       containers:
-
         # When the Pod has multiple containers, specify the container name.
         # type: string
         # default value: ""
@@ -162,13 +156,12 @@ application:
           # type: object
           # default value: {}
           # optional
-          install: 
-
+          install:
             # Inject environment variable for container when installed
             # type: object[]
             # default value: []
             # optional
-            env: 
+            env:
               - name: DEBUG
                 value: "true"
               - name: DOMAIN
@@ -179,12 +172,12 @@ application:
             # type: object[]
             # default value: []
             # optional
-            envFrom: 
-              envFile: 
+            envFrom:
+              envFile:
                 - path: dev.env
                 - path: dev.env
 
-            # Ports to be forwarded to local when workload has been installed 
+            # Ports to be forwarded to local when workload has been installed
             # localPort:remotePort
             # type: string[]
             # default value: []
@@ -197,7 +190,6 @@ application:
           # default value: {}
           # required
           dev:
-
             # The git repository clone url of the service
             # type: string
             # default value: null
@@ -244,8 +236,7 @@ application:
             # type: string[]
             # default value: ["/home/nocalhost-dev"]
             # optional
-            persistentVolumeDirs: 
-
+            persistentVolumeDirs:
               # Dir to be persisted in DevContainer
               # type: string
               # default value: null
@@ -258,7 +249,7 @@ application:
                 # optional
                 capacity: 100Gi
 
-            command: 
+            command:
               # Run command of the service
               # default value: [""]
               # optional
@@ -274,8 +265,7 @@ application:
             # type: object
             # default value: {}
             # optional
-            debug: 
-
+            debug:
               # Specify remote debug port
               # type: int
               # default value: null
@@ -292,8 +282,7 @@ application:
             # type: object
             # default value: {}
             # optional
-            sync: 
-
+            sync:
               # The synchronization file mode of the service (Not currently implemented)
               # "send" specifies one-way synchronization to the container, "sendreceive" specifies two-way synchronization
               # type: select，send/sendreceive
@@ -305,7 +294,7 @@ application:
               # type: string[]
               # default value: ["."]
               # optional
-              filePattern: 
+              filePattern:
                 - "./src"
                 - "./pkg/fff"
 
@@ -321,18 +310,18 @@ application:
             # type: object[]
             # default value: {}
             # optional
-            env: 
-            - name: DEBUG
-              value: "true"
-            - name: DOMAIN
-              value: "www.coding.com"
+            env:
+              - name: DEBUG
+                value: "true"
+              - name: DOMAIN
+                value: "www.coding.com"
 
             # Use env file to specify dev mode environment parameters
             # type: object
             # default value: {}
             # optional
             envFrom:
-              envFile: 
+              envFile:
                 - path: dev.env
                 - path: dev.env
 
@@ -342,5 +331,5 @@ application:
             # default value: []
             # optional
             portForward:
-            - 3306:3306
+              - 3306:3306
 ```

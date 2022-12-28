@@ -4,13 +4,13 @@ title: nhctl sync-status
 
 Tracing the files sync status, include local folder and remote device
 
-## Usage
+## 用法
 
 ```
 nhctl sync-status [NAME] [flags]
 ```
 
-## Flags
+## 标志
 
 ```
 Flags:

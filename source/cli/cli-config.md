@@ -4,7 +4,7 @@ title: nhctl config
 
 View, save and check application config file
 
-```
+```console
 Usage:
 nhctl config [command]
 
@@ -19,13 +19,13 @@ Available Commands:
 
 Edit service config
 
-```
+```console
 nhctl config edit [Name] [flags]
 ```
 
-### Flags
+### 标志
 
-```
+```console
 Flags:
     --app-config               get application config
     -t, --controller-type string   kind of k8s controller,such as deployment,statefulSet
@@ -42,17 +42,17 @@ Global Flags:
 
 Get application/service config
 
-```
+```console
 nhctl config get [Name] [flags]
 ```
 
 ```
-示例: 
+示例:
 ```
 
-### Flags
+### 标志
 
-```
+```console
 Flags:
     --app-config               get application config
     -t, --controller-type string   kind of k8s controller,such as deployment,statefulSet
@@ -69,13 +69,13 @@ Global Flags:
 
 Reload application/service config
 
-```
+```console
 nhctl config reload [Name] [flags]
 ```
 
-### Flags
+### 标志
 
-```
+```console
 Flags:
     -t, --controller-type string   kind of k8s controller,such as deployment,statefulSet
     -d, --deployment string        k8s deployment which your developing service exists
@@ -91,13 +91,13 @@ Global Flags:
 
 Get service config template
 
-```
+```console
 nhctl config template [Name] [flags]
 ```
 
-### Flags
+### 标志
 
-```
+```console
 Flags:
     -t, --controller-type string   kind of k8s controller,such as deployment,statefulSet
     -d, --deployment string        k8s deployment which your developing service exists

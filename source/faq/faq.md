@@ -1,44 +1,33 @@
-import TOCInline from '@theme/TOCInline';
+# 常问问题
 
-# FAQ
+## 安装
 
-<TOCInline toc={toc} />
+## 问题
 
-## Installation
+### Linux 的文件同步太慢
 
+如果您的文件同步在 Linux 的速度太慢，则很可能是由于局部限制。
 
-## Issues
+???+ question "如何增加插图限制以使我的文件系统观察者工作？"
 
-### File sync is too slow in Linux
+    Linux通常限制每个用户的观测量（通常为8192）。当您有更多目录时，您需要调整该数字。
 
-If your file synchronization is too slow in linux, it is most likely due to inotify limit.
+    在许多Linux发行版中，您可以运行以下内容来修复它：
 
-#### How do I increase the inotify limit to get my filesystem watcher to work?
+    ```bash
+    echo "fs.inotify.max_user_watches=204800" | sudo tee -a /etc/sysctl.conf
+    ```
 
-Linux typically restricts the amount of watches per user (usually 8192). When you have more directories you need to adjust that number.
+    在Arch Linux和其他可能的其他情况下，首选将此行写入单独的文件，即您应该运行：
 
-On many Linux distributions you can run the following to fix it:
+    ```bash
+    echo "fs.inotify.max_user_watches=204800" | sudo tee -a /etc/sysctl.d/90-override.conf
+    ```
 
-```bash
+    重新启动后，这只会生效。要立即调整限制，请运行：
 
-echo "fs.inotify.max_user_watches=204800" | sudo tee -a /etc/sysctl.conf
+    ```bash
+    sudo sh -c 'echo 204800 > /proc/sys/fs/inotify/max_user_watches'
+    ```
 
-```
-
-On Arch Linux and potentially others it is preferred to write this line into a separate file, i.e. you should run:
-
-```bash
-
-echo "fs.inotify.max_user_watches=204800" | sudo tee -a /etc/sysctl.d/90-override.conf
-
-```
-
-This only takes effect after a reboot. To adjust the limit immediately, run:
-
-```bash
-
-sudo sh -c 'echo 204800 > /proc/sys/fs/inotify/max_user_watches'
-
-```
-
-## Operating
+## 操作

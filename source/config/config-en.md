@@ -1,43 +1,35 @@
-# Overview
+# 概述
 
-## [Nocalhost overview (what is it, how to configure, and what features does it have?)](config-overview-en.md)
+## [配置概述](config-overview-en.md)
 
-This section introduces some information such as what Nocalhost configuration is, how to modify the configuration, and what features does it have. **If you have no concept of Nocalhost configuration** or want to understand the structure and features of Nocalhost configuration, you can read this section.
+它是什么，如何配置以及它具有什么功能？
 
-<br/>
+本节介绍了一些信息，例如 Nocalhost 配置是什么，如何修改配置以及具有什么功能。
+**如果您没有 Nocalhost 配置的概念** 或想了解 Nocalhost 配置的结构和功能，则可以读取本节。
 
-******
+## [提供什么配置？](config-spec-en.md)
 
-## [What configuration does Nocalhost provide?](config-spec-en.md)
+开发配置定义了输入`DevMode`的行为。
+如果 **您想在输入`DevMode`时进行一些自定义配置**，则开发配置将很有帮助。
+如果您想知道 Nocalhost 提供的配置，则可以阅读本节。
 
-Development configuration defines the behavior of entering `DevMode`. If you want to **make some customized configuration when entering `DevMode`**, development configuration would be helpful. If you want to know what configurations Nocalhost provides, you can read this section.
+## [支持哪种配置方式？](configure-en.md)
 
-<br/>
+Nocalhost 支持多种配置 Devmode 的方法，并为各种丰富的用法方案提供支持。
+最常见的配置方法是右键单击 IDE 插件中的特定工作负载，然后选择`DevConfig`以输入开发配置编辑 UI。
 
-******
+此外，Nocalhost 还支持将开发配置放置在 **源目录，ConfigMap 和注释** 中。
+例如，可以通过上述配置方式在过程中或在 Helm 图中的 CD 上进行配置，以避免重复配置或自定义配置，等等。
 
-## [What configuration ways does Nocalhost support?](configure-en.md)
+如果您想了解有关多种配置开发配置方式的更多信息，则可以单击本节的详细信息。
 
-Nocalhost supports multiple ways to configure the DevMode and provides support for various rich usage scenarios. The most common configuration way is to right-click the specific workload in the IDE plug-in and select `DevConfig` to enter the Development configuration editing UI.
+## [部署配置](config-deployment-en.md)
 
+Nocalhost 具有应用程序部署的功能。在`Nocalhost Server`下，这是一个高频功能。
+Nocalhost 为工作负载提供了 **依赖控制和 ENV 注入** 之类的功能。
 
-Besides, Nocalhost also supports placing the development configuration in the **source directory, configMap, and annotation**. For example, the development configuration can be configured on the CD in a process or in the helm chart, rawManifest, through the above-mentioned configuration ways, to avoid repeated configuration or customized configuration, etc.
+!!! tip "Tips"
 
+    如果您不使用`Nocalhost Server`或不需要诸如Workload依赖控制和ENV注入或具有自己的完整部署方式之类的功能，则无需阅读本节。
 
-If you want to learn more about multiple configure ways of development configuration, you can click on the details of this section.
-
-<br/>
-
-******
-
-## [Deployment Configuration](config-deployment-en.md)
-
-Nocalhost has the function of application deployment. Under `Nocalhost Server`, this is a high-frequency function. Nocalhost provides features such as **dependency control and env injection** to workloads.
-
-:::tip Tips
-
-If you do not use `Nocalhost Server` or do not need functions such as workload dependency control and env injection or have your own complete deployment way, you don't need to read this section.
-
-:::
-
-Nocalhost supports Helm, rawManifest, and Kustomize for the deployment of K8s applications, it also supports multiple configuration way such as **configMap and annotation**.
+Nocalhost 支持 Helm，RawManifest 和 Kustomize 用于部署 K8S 应用程序，它还支持多种配置方式，例如 **ConfigMap 和注释**。

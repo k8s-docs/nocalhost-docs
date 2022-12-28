@@ -1,8 +1,9 @@
 # Upgrade
 
- Upgrade nocalhost server whit [Helm](https://helm.sh/docs/intro/install/)
+Upgrade nocalhost server whit [Helm](https://helm.sh/docs/intro/install/)
 
 ## Prerequisites
+
 - Helm 3+
 
 ## Add Helm Chart Repository
@@ -17,8 +18,7 @@ helm repo update
 ```console
 helm upgrade nocalhost nocalhost/nocalhost -n nocalhost
 ```
-:::tip
 
-use the flag `--reset-values` when upgrade nocalhost, if you install nocalhost server with `nhctl init`
+!!! tip
 
-:::
+    use the flag `--reset-values` when upgrade nocalhost, if you install nocalhost server with `nhctl init`

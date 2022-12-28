@@ -21,14 +21,13 @@ Available Commands:
 
 Associate service dev dir
 
-
-### Usage
+### 用法
 
 ```
 nhctl dev associate [Name] [flags]
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:
@@ -48,13 +47,13 @@ Global Flags:
 
 Run cmd in dev container
 
-### Usage 
+### 用法
 
 ```
 nhctl dev cmd [NAME] [flags]
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:
@@ -74,14 +73,13 @@ Global Flags:
 
 End dev model
 
-
-### Usage 
+### 用法
 
 ```
 nhctl dev end [NAME] [flags]
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:
@@ -99,13 +97,13 @@ Global Flags:
 
 Reset service
 
-### Usage 
+### 用法
 
 ```
 nhctl dev reset [NAME] [flags]
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:
@@ -123,13 +121,13 @@ Global Flags:
 
 Start DevMode
 
-### Usage 
+### 用法
 
 ```
 nhctl dev start [NAME] [flags]
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:
@@ -158,13 +156,13 @@ Global Flags:
 
 Enter dev container's terminal
 
-### Usage 
+### 用法
 
 ```
 nhctl dev terminal [NAME] [flags]
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:

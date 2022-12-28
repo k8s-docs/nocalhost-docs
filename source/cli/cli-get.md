@@ -4,26 +4,26 @@ title: nhctl get
 
 Get resource info
 
-## Usage
+## 用法
 
 ```
 nhctl get type [flags]
 ```
 
 ```
-Example:
+!!! example
 
 # Get all application
 nhctl get application --kubeconfig=kubeconfigfile
 
 # Get all application in namespace
 nhctl get application -n namespaceName --kubeconfig=kubeoconfigpath
-  
+
 # Get all deployment of application in namespace
 nhctl get deployment -n namespaceName -a bookinfo --kubeconfig=kubeconfigpath
 ```
 
-## Flags
+## 标志
 
 ```
 Flags:

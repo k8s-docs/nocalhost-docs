@@ -1,11 +1,9 @@
 # Rancher RKE & K3s
 
-:::note Requirements
-- 
-:::
+!!! note Requirements
+
+- :::
 
 ## Connect by KubeConfig
 
-
 ## FAQ
-

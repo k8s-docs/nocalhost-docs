@@ -4,13 +4,13 @@ title: nhctl convert
 
 Convert config file between different versions
 
-## Usage
+## 用法
 
 ```
 nhctl convert [flags]
 ```
 
-## Flags
+## 标志
 
 ```
 Flags:

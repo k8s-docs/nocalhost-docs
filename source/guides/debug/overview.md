@@ -1,7 +1,5 @@
-import useBaseUrl from '@docusaurus/useBaseUrl';
+# 概述
 
-# Overview
+Nocalhost 即使在远程 Kubernetes 群集中调试时，也提供了您在 IDE 中使用的调试体验。
 
-Nocalhost provides the same debugging experience you used in the IDE even when debugging in the remote Kubernetes cluster.
-
-You can [remote debug your Kubernetes workloads](./jetbrains-debug), [access the container's terminal](./access-terminal) and [viewing the container logs](./log-viewer) right within your favourite IDEs.
+您可以[远程调试 kubernetes workloads](./jetbrains-debug)，[访问容器的终端](./access-terminal)和[查看容器日志](./log-viewer)在您喜欢的 IDES 中。

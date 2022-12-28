@@ -4,7 +4,7 @@ title: nhctl list
 
 List all applications
 
-## Usage
+## 用法
 
 ```
 nhctl list [NAME] [flags]
@@ -13,7 +13,7 @@ Aliases:
   list, ls
 ```
 
-## Flags
+## 标志
 
 ```
 Flags:
@@ -27,4 +27,3 @@ Global Flags:
       --kubeconfig string   the path of the kubeconfig file
   -n, --namespace string    kubernetes namespace
 ```
-

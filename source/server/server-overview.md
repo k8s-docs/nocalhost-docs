@@ -1,126 +1,103 @@
-import useBaseUrl from '@docusaurus/useBaseUrl';
+# 概述
 
-# Overview
+在本文档中，我们将解释 Nocalhost 服务器的核心思想，并阐明项目中广泛使用的一些技术术语。
 
-In this documentation, we will explain the core idea of Nocalhost Server and clarify some technical terms that are widely used in the project.
+## 概念
 
-## The Concepts
+### 集群
 
-### Cluster
+Nocalhost **集群** 通常对应于 Kubernetes 群集。Nocalhost 支持管理 TKE，GKE，Minikube 等多群集。
 
-A Nocalhost **Cluster** is usually corresponds to a Kubernetes cluster. Nocalhost supports to manage multi cluster like TKE, GKE, Minikube and etc.
+在实际开发过程中，用户不需要知道群集的概念，而[DevSpace](#devspace)下的用户操作实际上依赖于群集的功能。
 
-In the actual development process, users do not need to know the concept of Cluster, and user's operation under [DevSpace](#devspace) actually rely on the capabilities of Cluster.
+#### 集群管理
 
-#### Cluster Management
+!!! tip "KubeConfig"
 
-:::tip KubeConfig
+    If you want to manage a Cluster，then need to maintain a `KubeConfig` with the cluster's Cluster-Admin role.
 
-If you want to manage a Cluster，then need to maintain a `KubeConfig` with the cluster's Cluster-Admin role.
+Cluster is generally used with DevSpace, if you need to manage Cluster, you refer to [Manage Cluster](./manage-devspace-iso)
 
-:::
-
-Cluster is generally used with DevSpace, if you need to manage Cluster, you refer to [Manage Cluster](./manage-devspace-iso) 
-
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/server/cluster.png')} />
-  <figcaption>Nocalhost cluster</figcaption>
-</figure>
+![Nocalhost cluster](../img/server/cluster.png)
 
 ### DevSpace
 
-**DevSpace** is a concept of Nocalhost, which represents a pre-allocated development space managed by Nocalhost. Developers can deploy, uninstall, develop, and debug applications within DevSpace. DevSpaces are isolated from each other. 
+**DevSpace** 是 Nocalhost 的概念，它代表了由 Nocalhost 管理的预先分配的开发空间。
+开发人员可以在 DevSpace 内部部署，卸载，开发和调试应用程序。
+开发空间彼此隔离。
 
-Nocalhost also allow developers to share their DevSpaces with other developers for collaborative development. 
+Nocalhost also allow developers to share their DevSpaces with other developers for collaborative development.
 
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/server/devspace-concept.png')} width="700"/>
-  <figcaption>Nocalhost DevSpace</figcaption>
-</figure>
+![Nocalhost DevSpace](../img/server/devspace-concept.png)
 
-#### DevSpace Management
+#### DevSpace 管理
 
-If you need to manage **DevSpace**, you can refer to [Manage DevSpace](./manage-devspace-iso) 
+If you need to manage **DevSpace**, you can refer to [Manage DevSpace](./manage-devspace-iso)
 
-### Application
+### 应用
 
 **Application** is a concept of Nocalhost, it is mainly used to manage a set of manifest files you want to apply for local development, it supports both Kubernetes manifest and helm chart. In other words, these manifests usually contain all the k8s resources that your own application depends on. If possible, we should try to keep it to a minimum.
 
 Nocalhost supports three types of applications:
 
-* Manifest
-* Helm
-* Kustomize
+- Manifest
+- Helm
+- Kustomize
 
 **Application** can be used to create a [DevSpace](#devspace), we recommend using IDE plug-in directly to deploy your application, IDE plugin is worked on the DevSpace created by Application. In other words, after being assigned a DevSpace, the developer can easily develop on the IDE.
 
 After being assigned a DevSpace, you will get a `KubeConfig` to access this DevSpace, `nhctl` or plug-in can deploy the application based on the application's manifest file and `KubeConfig`.
 
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/server/manifest-and-kubeconfig.png')} width="700"/>
-  <figcaption>Kubernetes application</figcaption>
-</figure>
+![Kubernetes application](../img/server/manifest-and-kubeconfig.png)
 
 So **DevSpace** can actually be approximated as **Application** + **Kubeconfig**:
 
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/server/application-and-space.png')} width="700"/>
-  <figcaption>Nocalhost DevSpace</figcaption>
-</figure>
+![Nocalhost DevSpace](../img/server/application-and-space.png)
 
-#### Application Management
+#### 应用程序管理
 
-If you need to manage **Applications**, you can refer to [Manage Application](./manage-app) 
+If you need to manage **Applications**, you can refer to [Manage Application](./manage-app)
 
-### Service
+### 服务
 
 **Service** is completely different from svc of Kubernetes. Service can be considered as an enhancement of application deployment and development.
 
-- [Read more to learn how to configure application development](../config/config-spec-en.md)
-- [Read more to learn how to configure application deployment](../config/config-deployment-quickstart.md)
+- [阅读更多信息以了解如何配置应用程序开发](../config/config-spec-en.md)
+- [阅读更多信息以了解如何配置应用程序部署](../config/config-deployment-quickstart.md)
 
-:::caution Service Configs
+!!! caution "Service Configs"
 
-Service configurations are not necessary, only needs when essential.
+    Service configurations are not necessary, only needs when essential.
 
-:::
+### 用户
 
-### User
+**User** belongs to the independent concept of Nocalhost, it's **different** with user in Kubernetes. When you use `Nocalhost Server` and Nocalhost Plugins, User is used to identify your identity and access control to resources.
 
-**User** belongs to the independent concept of Nocalhost, it's **different** with user in Kubernetes. When you use `Nocalhost Server` and Nocalhost Plugins, User is used to identify your identity and access control to resources. 
-
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/server/user-and-space.png')} width="800"/>
-  <figcaption>Nocalhost DevSpace and user</figcaption>
-</figure>
+![Nocalhost DevSpace and user](../img/server/user-and-space.png)
 
 There are two types of **User** in Nocalhost: **Standard User** and **System Admin**
 
-#### Standard User
+#### 标准用户
 
 - Can only log in IDE Plugin, users can develop under their own DevSpace. these DevSpace are all created by Administrator.
 - User can only see their own DevSpace, and have all the permissions under these DevSpace, such as install, uninstall (deploy and destroy), enter DevMode and port-forwarding.
 - Cannot log in to Nocalhost-Web, nor can they delete the DevSpace, or disassociate it from the DevSpace, which is very similar to the admin permission under a certain namespace of Kubernetes.
 
-#### System Admin
+#### 系统管理员
 
 - Has the permission to access `Nocalhost Server`, and with all the permissions in Nocalhost Web, such as create and manage Application, Cluster, User, DevSpace, etc
 
 - Have all the permissions of **User**, such as logging in at IDE plugins, develop in their own DevSpace list
 
-#### User Management
+#### 用户管理
 
-If you need to manage **User**, you can refer to [Manage User](./manage-user) 
+If you need to manage **User**, you can refer to [Manage User](./manage-user)
 
-## How It Works
+## 怎么运行的
 
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/server/nh-architecture.jpeg')} />
-  <figcaption>Nocalhost overall working diagram</figcaption>
-</figure>
+![Nocalhost总体工作图](../img/server/nh-architecture.jpeg)
 
-### IDE Plugin
-
+### IDE 插件
 
 ### `nhctl`
 
@@ -129,4 +106,3 @@ If you need to manage **User**, you can refer to [Manage User](./manage-user)
 ### Nocalhost-API
 
 ### Nocalhost-Dep
-

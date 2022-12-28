@@ -4,7 +4,7 @@ title: nhctl sync
 
 Sync files to remote Pod in Kubernetes
 
-## Usage
+## 用法
 
 ```
 nhctl sync [NAME] [flags]

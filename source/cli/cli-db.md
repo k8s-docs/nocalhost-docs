@@ -19,13 +19,14 @@ Available Commands:
 
 Get all leveldb data
 
-### Usage
+### 用法
 
 ```
 nhctl db all [NAME] [flags]
 ```
 
-### Flags
+### 标志
+
 ```
 Flags:
       --app string   List leveldb data of specified application
@@ -41,13 +42,14 @@ Global Flags:
 
 Compact leveldb data
 
-### Usage
+### 用法
 
 ```
 nhctl db compact [NAME] [flags]
 ```
 
-### Flags
+### 标志
+
 ```
 Flags:
       --app string   Leveldb data of specified application
@@ -64,13 +66,13 @@ Global Flags:
 
 Update leveldb data
 
-### Usage
+### 用法
 
 ```
 nhctl db put [flags]
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:
@@ -90,13 +92,13 @@ Global Flags:
 
 Get all leveldb data
 
-### Usage
+### 用法
 
 ```
 nhctl db size [NAME] [flags]
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:

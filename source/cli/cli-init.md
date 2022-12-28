@@ -17,20 +17,20 @@ Available Commands:
 
 Init api, web and dep component in cluster
 
-### Usage
+### 用法
 
 ```
 nhctl init demo [flags]
 ```
 
 ```
-Example:
+!!! example
 
 nhctl init demo -n [DevSpace Name] -t nodeport -p [port]
 nhctl init demo -n [DevSpace Name]
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:
@@ -54,13 +54,13 @@ Global Flags:
 
 Nocalhost（nocalhost-dep）组件初始化
 
-### Usage
+### 用法
 
 ```
 nhctl init dep [flags]
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:

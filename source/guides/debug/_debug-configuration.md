@@ -1,7 +1,3 @@
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
 ## Configuration
 
 The development environment is different between developers. You should configure remote debug configurations according to the actual situation.
@@ -37,7 +33,7 @@ containers:
 
 #### Maven Example
 
-The shell command for **Maven** example:
+The shell command for **Maven** !!! example
 
 ```bash title="jdk >= 1.8 and springBoot >=2.2.1.RELEASE"
  mvn spring-boot:run -Dspring-boot.run.jvmArguments="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005"
@@ -49,7 +45,7 @@ For lower version of the springBoot you should replace `-Drun.jvmArguments` with
 
 #### Gradle Example
 
-The startup command for **Gradle** example:
+The startup command for **Gradle** !!! example
 
 ```bash title="Gradle's debug.sh"
 ./gradlew bootRun --debug-jvm --no-daemon
@@ -111,10 +107,7 @@ python -m debugpy --listen 9009 --wait-for-client productpage.py 9080
 
 Nocalhost using pydevd to debug Python application.
 
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/debug/python-debug.jpg')} />
-  <figcaption>Principle of Remote Python Debugging</figcaption>
-</figure>
+![Principle of Remote Python Debugging](./img/debug/python-debug.jpg)
 
 </TabItem>
   
@@ -171,10 +164,7 @@ php -t ./ -S 0.0.0.0:9999;
 
 Nocalhost using Xdebug to debug PHP applications.
 
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/debug/php-debug.jpg')} />
-  <figcaption>Principle of Remote PHP Debugging</figcaption>
-</figure>
+![Principle of Remote PHP Debugging](./img/debug/php-debug.jpg)
 
 </TabItem>
 

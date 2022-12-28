@@ -1,21 +1,22 @@
 # Project information
-site_name: nocalhost 文档
-site_url: https://k8s-docs.github.io/nocalhost-docs/
-site_author: Martin Donath
-site_description: nocalhost
+site_name: Nocalhost 文档
+site_url: https://nocalhost.dev/
+site_author: Nocalhost
+site_description: Nocalhost is an open-source toolsets help to build cloud-native applications easier and faster
 docs_dir: source
 site_dir: docs
 
 # Repository
 repo_name: k8s-docs/nocalhost-docs
-repo_url: https://k8s-docs.github.io/nocalhost-docs
+repo_url: https://www.github.com/k8s-docs/nocalhost-docs
 
 # Copyright
-copyright: Copyright &copy; 2016 - 2022 Martin Donath
+copyright: Copyright &copy; 2021-2022 Nocalhost
 
 # Configuration
 theme:
   name: material
+  language: zh
   # custom_dir: material/.overrides
   features:
     # - announce.dismiss
@@ -78,16 +79,16 @@ extra:
   #   provider: google
   #   property: !ENV GOOGLE_ANALYTICS_KEY
   social:
+    - icon: fontawesome/solid/globe
+      link: https://nocalhost.dev
     - icon: fontawesome/brands/github
-      link: https://github.com/k8s-docs
-    - icon: fontawesome/brands/gitter
-      link: https://gitter.im/k8s-docs/nocalhost-docs
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/k8s-docs/nocalhost-docs/
-    - icon: fontawesome/brands/python
-      link: https://pypi.org/project/nocalhost-docs/
+      link: https://github.com/nocalhost/nocalhost
+    - icon: fontawesome/brands/slack
+      link: https://nocalhost.slack.com
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/nocalhost
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/k8s-docs
+      link: https://twitter.com/nocalhost
 
 # Extensions
 markdown_extensions:
@@ -135,17 +136,89 @@ nav:
       - 介绍: README.md
       - 快速入门: quick-start.md
       - 安装: installation.md
-  - 参考:
-      - 配置: reference/nh-config.md
-  - practice:
-      - kubesphere: practice/kubesphere.md
-  - guides:
-      - hot-reload: guides/hot-reload.md
-  - faq: faq/faq.md
+      - 配置参考: reference/nh-config.md
+      - 常见问题: faq/faq.md
+  - 用户指南:
+      - 集群管理: guides/manage-cluster.md
+      - 应用部署:
+          - 使用 Nocalhost 进行应用部署: guides/deploy/deploy-app.md
+          - 部署示例应用: guides/deploy/deploy-demo.md
+      - 开发:
+          - develop-service: guides/develop/service.md
+          - DevMode(Replace): guides/develop/service-replace.md
+          - DevMode(Duplicate): guides/develop/service-dup.md
+          - CustomResources: guides/develop/service-crd.md
+          - VPN proxy: guides/develop/service-vpn.md
+          - DevMode Mesh: guides/develop/service-dup-mesh.md
+      - 调试:
+          - 概览: guides/debug/overview.md
+          - 远程调试:
+              - Jetbrains 远程调试: guides/debug/jetbrains-debug.md
+              - VSCode 远程调试: guides/debug/vscode-debug.md
+          - 访问容器的终端: guides/debug/access-terminal.md
+          - 查看日志: guides/debug/log-viewer.md
+      - 远程运行: guides/remote-run.md
+      - 热加载: guides/hot-reload.md
   - 配置:
-      - config: config/config-en.md
-  - cli:
-      - cli: cli/cli-install.md
+      - 概述: config/config-en.md
+      - 配置是什么？: config/config-overview-en.md
+      - Spec:
+          - 规格: config/config-spec-en.md
+          - 容器配置: config/config-dev-container-en.md
+          - 增强配置:
+              - 增强: config/config-enhance.md
+              - 模式匹配: config/config-pattern.md
+          - 开发配置: config/config-develop.md
+      - 配置方式: config/configure-en.md
+      - 应用部署:
+          - 部署配置: config/deployment/README.md
+          - 快速启动: config/deployment/quickstart.md
+          - 规格: config/deployment/spec.md
+          - 高级: config/deployment/advance.md
+          - 特殊语法: config/deployment/syntax.md
+  - 最佳实践:
+      - 云兼容:
+          - K8兼容: practice/cloud/k8s-compatible.md
+          - 阿里云: practice/cloud/ali-ack.md
+      - 预释放:
+          - kubesphere: practice/pre-release/kubesphere.md
+  - NHCTL:
+      - nhctl apply: cli/cli-apply.md
+      - nhctl config: cli/cli-config.md
+      - nhctl convert: cli/cli-convert.md
+      - nhctl daemon: cli/cli-daemon.md
+      - nhctl db: cli/cli-db.md
+      - nhctl describe: cli/cli-describe.md
+      - nhctl dev: cli/cli-dev.md
+      - nhctl exec: cli/cli-exec.md
+      - nhctl get: cli/cli-get.md
+      - nhctl init: cli/cli-init.md
+      - nhctl install: cli/cli-install.md
+      - nhctl k: cli/cli-k.md
+      - nhctl list: cli/cli-list.md
+      - nhctl port-forward: cli/cli-port-forward.md
+      - nhctl profile: cli/cli-profile.md
+      - nhctl pvc: cli/cli-pvc.md
+      - nhctl render: cli/cli-render.md
+      - nhctl reset: cli/cli-reset.md
+      - nhctl sync-status: cli/cli-sync-status.md
+      - nhctl sync: cli/cli-sync.md
+      - nhctl uninstall: cli/cli-uninstall.md
+      - nhctl upgrade: cli/cli-upgrade.md
+      - nhctl version: cli/cli-version.md
+      - nhctl yaml: cli/cli-yaml.md
+  - 服务器:
+      - 服务器概述: server/server-overview.md
+      - 快速开始: server/deploy-server.md
+      - 服务器升级: server/upgrade.md
+      - 管理用户: server/manage-user.md
+      - 管理集群: server/manage-cluster.md
+      - 管理DevSpace:
+          - Isolated DevSpace: server/manage-devspace-iso.md
+          - 管理 MeshSpace: server/manage-devspace-mesh.md
+      - 管理应用程序: server/manage-app.md
+      - Nocalhost Dep: server/nh-dep.md
+      - kubesphere里部署: server/deploy-in-kubesphere.md
   - 更新日志:
       - 0.6.x: changelogs/0.6.x.md
       - 0.5.x: changelogs/0.5.x.md

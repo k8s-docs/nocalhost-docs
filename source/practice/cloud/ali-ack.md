@@ -1,11 +1,7 @@
-# Alibaba Cloud ACK
+# 阿里巴巴云 ack
 
-:::note Requirements
-- 
-:::
+!!! note "Requirements"
 
-## Connect by KubeConfig
+## 由 kubeconfig 连接
 
-
-## FAQ
-
+## 常问问题

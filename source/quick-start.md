@@ -1,168 +1,119 @@
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
 # Quick Start
 
-:::note About this guide
+!!! note "关于本指南"
 
-**Goal:** Install Nocalhost, evaluate the core features and experience efficient cloud-native application development. <br />
-**Estimate time:** 5 minutes <br />
-**Requirements:**
+    - **Goal:** 安装Nocalhost，评估核心功能并体验有效的云本地应用程序开发。
+    - **估计时间:** 5分钟
+    - **要求:**
 
-- Any local or remote Kubernetes cluster (minikube, Docker Desktop, TKE, GKE, EKS, AKS, Rancher, ...). Allocate at least 4 GB of memory for single-node clusters like [Docker Desktop](https://docs.docker.com/docker-for-mac/kubernetes/) and [minikube](https://minikube.sigs.k8s.io/docs/start/).
-- **RBAC** must be enabled in the above cluster
-- **Socat** should installed in the nodes for cluster (Nocalhost file synchronization depends on port-forward)
-- **Configured KubeConfig file** that has namespace admin privilege
-- Kubernetes api-server can be accessed internal and external
-- Visual Studio Code (1.52+)
+        - Any local or remote Kubernetes cluster (minikube, Docker Desktop, TKE, GKE, EKS, AKS, Rancher, ...). Allocate at least 4 GB of memory for single-node clusters like [Docker Desktop](https://docs.docker.com/docker-for-mac/kubernetes/) and [minikube](https://minikube.sigs.k8s.io/docs/start/).
+        - **RBAC** must be enabled in the above cluster
+        - **Socat** should installed in the nodes for cluster (Nocalhost file synchronization depends on port-forward)
+        - **Configured KubeConfig file** that has namespace admin privilege
+        - Kubernetes api-server can be accessed internal and external
+        - Visual Studio Code (1.52+)
 
-:::
+## 1. 安装 Nocalhost VS 代码扩展
 
-## 1. Install Nocalhost VS Code Extension
+1.  打开 VS 代码，然后单击图标<img src='../img/icons/vs-code-icon.jpg' width="20" />进入扩展
+2.  在搜索框中输入`nocalhost`
+3.  选择`Nocalhost Extension`，然后单击 **安装** 按钮。
 
-1. Open VS Code and go to `Extensions` by click the <img src={useBaseUrl('/img/icons/vs-code-icon.jpg')} width="20" /> icon
-2. Input `Nocalhost` in the search box
-3. Select the `Nocalhost Extension`, and click the **Install** button.
+    ![VS代码扩展市场](./img/installation/vscode-market.png)
 
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/installation/vscode-market.png')} />
-  <figcaption>VS Code Extension Market</figcaption>
-</figure>
+    !!! tip "JetBrains Plugin"
 
-:::tip JetBrains Plugin
+        Nocalhost确实完全支持Jetbrains，请参阅[安装Jetbrains插件](./installation##install-jetbrains-plugin).
 
-Nocalhost does fully supports JetBrains, please refer to [Install JetBrains Plugin](./installation##install-jetbrains-plugin).
+## 2. 连接到 Kubernetes 群集
 
-:::
+单击侧面面板上的 Nocalhost 图标<img src='../img/icons/logo-light.svg' width="20" />，打开 Nocalhost 插件。
 
-## 2. Connect to Kubernetes Cluster
+![VS代码连接到群集](./img/installation/vs-plugin.jpg)
 
-Click on the Nocalhost icon <img className="svg-icon" src={useBaseUrl('/img/icons/logo-light.svg')} width="20" /> on the side panel, open the Nocalhost plugin.
+您可以使用两种方法连接到 Kubernetes 群集：
 
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/installation/vs-plugin.jpg')} />
-  <figcaption>VS Code Connect to Cluster</figcaption>
-</figure>
+=== "通过 KubeConfig"
 
-There are two methods that you can use to connect to Kubernetes cluster:
+    从本地目录中选择 `KubeConfig` 文件。
 
-<Tabs
-defaultValue="kubeconfig"
-values={[
-{label: 'By KubeConfig', value: 'kubeconfig'},
-{label: 'Paste as Text', value: 'text'},
-]}>
-<TabItem value="kubeconfig">
+    !!! info "默认 KubeConfig"
 
-<p>Select the <code>KubeConfig</code> file from any local directory.</p>
+          Nocalhost将尝试从您的本地`〜/.kube/config`加载`kubeconfig`默认情况下。
 
-:::info Default KubeConfig
+=== "粘贴作为文本"
 
-Nocalhost will try to load `KubeConfig` from your local `~/.kube/config` by default.
+    将 `KubeConfig` 粘贴为文本
 
-:::
+    !!! tip "获取 KubeConfig"
 
-</TabItem>
-  
-<TabItem value="text">
+        您可以使用以下命令查看您的 `KubeConfig` 并复制它。
 
-<p>Paste the <code>KubeConfig</code> as a text</p>
+        ```bash
+        kubectl config view --raw --flatten
+        ```
 
-:::tip Get KubeConfig
+成功加载`KubeConfig`后，选择要访问的上下文，然后连接到集群。
 
-You can use the following command to view your `KubeConfig` and copy it.
+**Nocalhost** 将自动显示集群列表。
 
-```bash
-kubectl config view --raw --flatten
-```
+![VS代码集群列表](./img/installation/cluster-list.jpg)
 
-:::
+## 3. 输入开发模式
 
-</TabItem>
-</Tabs>
+!!! tip "Application"
 
-After `KubeConfig` is successfully loaded, select the context that you want to access, then connect to the cluster.
+    我们在此处以BookInfo应用程序为例。
+    您可以使用已经部署在Kubernetes群集中的应用程序，也可以关注 **[部署演示应用程序](./guides/deploy/deploy-demo.md)** 在Kubernetes群集中部署演示应用程序。
 
-**Nocalhost** will automatically show the cluster list.
+确保您在 Kubernetes 群集中成功部署了工作负载，然后：
 
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/installation/cluster-list.jpg')} />
-  <figcaption>VS Code Cluster List</figcaption>
-</figure>
+1. 扩展工作负载树，找到要开发的工作负载
+2. 单击<img src='../img/icons/dev_start.svg' width="18" />开始 `Development Mode (DevMode)`
+3. 指定源代码本地目录，也可以从现有的 GIT 存储库中克隆。
+4. Nocalhost 将打开一个新的 VS 代码窗口，并自动启动`devmode`。
 
-## 3. Enter Development Mode
+![工作负载输入DevMode](./img/opt/enter-devmode.gif)
 
-:::tip Application
+!!! warning "关于前提"
 
-We are using the bookinfo application as an example here. You can use your own application that already deployed in your Kubernetes clusters, or you can follow **[Deploy Demo Application](./guides/deploy/deploy-demo.md)** to deploy the demo application in your Kubernetes clusters.
+    如果您正在遇到DevMode在“前提K8S群集”中，则需要[配置SideCar映像地址](./config/config-dev-container-en#sidecar-image-customization)并将镜像推到您自己的存储库中。
 
-:::
+## 4. 更改代码并查看结果
 
-Make sure you have successfully deployed workloads within your Kubernetes Cluster, then:
+### 在远程容器中执行主进程
 
-1. Expand the workloads tree, find the workload you want to develop
-2. Click <img className="svg-icon" src={useBaseUrl('/img/icons/dev_start.svg')} width="18" /> to start the `Development Mode (DevMode)`
-3. Specify the source code local directory or you can clone from existing Git repository.
-4. Nocalhost will open a new VS Code window, and start the `DevMode` automatically.
+1.  在远程终端中运行以下命令以启动主进程
 
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/opt/enter-devmode.gif')} />
-  <figcaption>Workload Enter DevMode</figcaption>
-</figure>
+    ```bash
+    sh run.sh
+    ```
 
-:::warning On premise case
+    !!! tip "主要过程"
 
-If you are experiencing DevMode in on premise K8s cluster, you need to [configure the sidecar image address](./config/config-dev-container-en#sidecar-image-customization) additionally and push the image to your own repository.
+        输入DevMode时，应用程序主进程默认情况下不会自动启动，因此该应用程序不会响应任何请求。您需要手动启动主过程，然后才能访问它。
 
-:::
+2.  在您的 Web 浏览器中查看[http://127.0.1:39080](http://127.0.0.1:39080)上的运行结果
 
-## 4. Change Code and See Result
+    ![在远程终端中执行主过程](./img/opt/main-process.gif)
 
-### Execute main process in remote Container
+    !!! note "Port-Forwarding"
 
-**1.** Run the following command in the remote terminal to start main process
+        在我们的“Bookinfo”演示中demo, 我们已经将Port-Forward设置为39080:9080, 这意味着Nocalhost将自动将数据从本地端口 **39080** 转发到端口 **9080**.
 
-```bash
-sh run.sh
-```
+### 更改代码
 
-:::tip Main Process
+1.  修改`productPage.py`中的代码，并查看 Web 浏览器中的更改。 **不要** 忘记保存更改。
+2.  刷新网络浏览器并查看代码更改
 
-When entering DevMode, the application main process will not automatically start by default in the DevContainer, thus the application will not response any request. You need to manually start the main process before you can access it.
+    ![更改代码并查看结果](./img/opt/code-change.gif)
 
-:::
+👍 **恭喜!** 你们都准备去
 
-**2.** View the running result on [http://127.0.0.1:39080](http://127.0.0.1:39080) in your web browser
+## 下一步是什么？
 
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/opt/main-process.gif')} />
-  <figcaption>Execute the main process in remote terminal</figcaption>
-</figure>
+- 请参阅 Nocalhost 的[简介](./introduction)
+- 访问我们的[github repo](https://github.com/nocalhost/nocalhost)
+- 加入我们的[Slack](https://nocalhost.slack.com/)或扫描代码以加入我们的微信组
 
-:::note Port-Forwarding
-
-In our `bookinfo` demo, we've already set the port-forward to 39080:9080, which means Nocalhost will automatically forwards data from the local port **39080** to port **9080** on the defined `DevContainer`.
-
-:::
-
-### Change the code
-
-**1.** Modify code in `productpage.py` and see change in web browser. **Do not** forget to save your change.
-
-**2.** Refresh the web browser and see the code change
-
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/opt/code-change.gif')} />
-  <figcaption>Change code and see result</figcaption>
-</figure>
-
-👍 **Congratulations!** You are all set to go
-
-## What's Next?
-
-- Refer to Nocalhost's [Introduction](./introduction)
-- Visit our [Github Repo](https://github.com/nocalhost/nocalhost)
-- Join our [Slack](https://nocalhost.slack.com/) or scan the code to join our WeChat Group
-
-<img src={useBaseUrl('/img/nocal-host-wechat.png')} width="200" />
+![]('./img/nocal-host-wechat.png')

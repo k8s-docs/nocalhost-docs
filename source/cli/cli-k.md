@@ -16,19 +16,19 @@ Available Commands:
 
 ## nhctl k delete
 
-### Usage
+### 用法
 
 ```
 nhctl k delete [flags]
 ```
 
-``` 
-Example:
+```
+!!! example
 
 nhctl k delete [podName] --namespace nocalhost-reserved --kubeconfig=[path]
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:
@@ -59,19 +59,19 @@ Global Flags:
 
 ## nhctl k exec
 
-### Usage
+### 用法
 
 ```
 nhctl k exec [flags]
 ```
 
 ```
-Example:
+!!! example
 
 exec (POD | TYPE/NAME) [-c CONTAINER] [flags] -- COMMAND [args...]
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:
@@ -88,19 +88,19 @@ Global Flags:
 
 ## nhctl k logs
 
-### Usage
+### 用法
 
 ```
 nhctl k logs [flags]
 ```
 
 ```
-Example:
+!!! example
 
 nhctl logs [podName] -c [containerName] -f=true --tail=1 --namespace nocalhost-reserved --kubeconfig=[path]
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:
@@ -126,4 +126,3 @@ Global Flags:
       --kubeconfig string   the path of the kubeconfig file
   -n, --namespace string    kubernetes namespace
 ```
-

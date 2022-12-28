@@ -17,13 +17,13 @@ Available Commands:
 
 Convert json to yaml
 
-### Usage
+### 用法
 
 ```
 nhctl yaml from-json [flags]
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:
@@ -39,13 +39,13 @@ Global Flags:
 
 Convert yaml to json
 
-### Usage
+### 用法
 
 ```
 nhctl yaml to-json [flags]
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:
@@ -56,4 +56,3 @@ Global Flags:
       --kubeconfig string   the path of the kubeconfig file
   -n, --namespace string    kubernetes namespace
 ```
-

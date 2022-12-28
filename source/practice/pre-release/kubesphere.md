@@ -7,9 +7,6 @@ author_image_url: https://avatars.githubusercontent.com/u/3713305?v=4
 tags: [Kubernetes, KubeSphere, Development]
 ---
 
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
-
 ## Introduction
 
 This article walks you through using Nocalhost to seamlessly connect your local development machine to a remote Kubernetes cluster, allowing you to use your favourite IDE to develop and debug [KubeSphere](https://kubesphere.io/). Giving you the ability to comfortably develop and debug your remote apps with your existing skills.
@@ -17,7 +14,7 @@ This article walks you through using Nocalhost to seamlessly connect your local 
 This article covers:
 
 1. [Deploy the KubeSphere](#deploy-apisix-ingress-controller) to the remote Kubernetes cluster
-2. [Developing](#developing) and [debugging](#debugging) KubeSphere service in Kubernetes 
+2. [Developing](#developing) and [debugging](#debugging) KubeSphere service in Kubernetes
 
 ## Prerequisites
 
@@ -31,6 +28,3 @@ This article covers:
 You can follow [Minimal KubeSphere on Kubernetes](https://kubesphere.io/docs/quick-start/minimal-kubesphere-on-k8s/) for deployment.
 
 ## Develop
-
-
-

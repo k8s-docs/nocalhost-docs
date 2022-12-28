@@ -4,13 +4,13 @@ title: nhctl exec
 
 Execute a command in container
 
-## Usage
+## 用法
 
 ```
 nhctl exec [NAME] [flags]
 ```
 
-## Flags
+## 标志
 
 ```
 Flags:

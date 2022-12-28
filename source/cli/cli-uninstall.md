@@ -4,13 +4,13 @@ title: nhctl uninstall
 
 Uninstall application
 
-## Usage
+## 用法
 
 ```
 nhctl uninstall [NAME] [flags]
 ```
 
-## Flags
+## 标志
 
 ```
 Flags:

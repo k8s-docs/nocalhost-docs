@@ -4,13 +4,13 @@ title: nhctl reset
 
 Reset application
 
-## Usage
+## 用法
 
 ```
 nhctl reset [NAME] [flags]
 ```
 
-## Flags
+## 标志
 
 ```
 Flags:
@@ -21,4 +21,3 @@ Global Flags:
       --kubeconfig string   the path of the kubeconfig file
   -n, --namespace string    kubernetes namespace
 ```
-

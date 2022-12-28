@@ -1,11 +1,9 @@
 # Google GKE
 
-:::note Requirements
-- 
-:::
+!!! note Requirements
+
+- :::
 
 ## Connect by KubeConfig
 
-
 ## FAQ
-

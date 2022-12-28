@@ -1,57 +1,41 @@
 ---
 title: Pattern
 ---
-[Overview](config-en.md) / [Spec](config-spec-en.md) / [Enhance](config-enhance.md) / [Pattern](config-pattern.md)
 
-<br/>
+## 描述
 
-******
+如果某些文件应与其他设备同步或不同步, 配置相应`SyncFilePattern`/`IgnoreFilePattern`.
+所有模式均相对于文件夹根 (进入`DevMode`时选择的文件夹).
 
-### Description
+!!! danger "`IgnoreFilePattern`的优先级高于`SyncFilePattern`"
 
-If some files should be or not be synchronized to (or from) other devices, configure the corresponding `SyncFilePattern`/`IgnoreFilePattern`. All patterns are relative to the folder root (The folder you select while get into `DevMode`).
+    因此，如果您的模式都涵盖了同一文件，则该文件将被忽略。
 
-:::danger Caution
+## 模式语法
 
-The priority of the `IgnoreFilePattern` is higher than `SyncFilePattern`, so if your pattern both covered the same file, the file will be ignored.
+- **`foo`(常规文件名)** 与自己匹配, 即模式`foo`匹配文件`foo`, `subdir/foo` as well as any directory named `foo`. Spaces are treated as regular characters, except for leading and trailing spaces, which are automatically trimmed.
 
-:::
+- **`*`(星号)** matches zero or more characters in a filename, but does not match the directory separator. `te*ne` matches `telephone`, `subdir/telephone` but not `tele/phone`.
 
+- **` ** `(双星号)** matches as above, but also directory separators. `te\*\*ne`matches`telephone`, `subdir/telephone`and`tele/sub/dir/phone`.
 
-### Patterns syntax
+- **`?`(问号)** matches a single character that is not the directory separator. `te??st` matches `tebest` but not `teb/st` or `test`.
 
+- **`[]`(方括号)** denote a character range: `[a-z]` matches any lower case character.
 
+- **`{}`(大括号)** denote a set of comma separated alternatives: `{banana,pineapple}` matches either `banana` or `pineapple`.
 
-- Regular file names match themselves, i.e. the pattern `foo` matches the files `foo`, `subdir/foo` as well as any directory named `foo`. Spaces are treated as regular characters, except for leading and trailing spaces, which are automatically trimmed.
+- **`\`(反斜线)** “escapes” a special character so that it loses its special meaning. For example, `\{banana\}` matches `{banana}` exactly and does not denote a set of alternatives as above. _Escaped characters are not supported on Windows._
 
-- **Asterisk** (`*`) matches zero or more characters in a filename, but does not match the directory separator. `te*ne` matches `telephone`, `subdir/telephone` but not `tele/phone`.
+- **`/`、`./`(斜杠)** 仅在文件夹根部开始的匹配模式。 `/foo` 或 `./foo` 匹配 `foo` 但不匹配 `subdir/foo`.
 
-- **Double asterisk** (`**`) matches as above, but also directory separators. `te**ne` matches `telephone`, `subdir/telephone` and `tele/sub/dir/phone`.
+- **`(?i)`(不敏感)** 前缀开头的模式可以实现对案例不敏感的模式匹配。 `(?i)test` 匹配 `test`, `TEST` 和 `tEsT`. The `(?i)` prefix can be combined with other patterns, for example the pattern `(?i)picture*.png` indicates that `Picture1.PNG` should be synchronized. On Mac OS and Windows, patterns are always case-insensitive.
 
-- **Question mark** (`?`) matches a single character that is not the directory separator. `te??st` matches `tebest` but not `teb/st` or `test`.
+!!! info "可以按任何顺序指定前缀 (如 “(?i){foo,bar}/\*/bar”), 但不能单一的括号 (不是 “{foo,(?i),bar}/\*/bar”)."
 
-- **Square brackets** (`[]`) denote a character range: `[a-z]` matches any lower case character.
+## 例子
 
-- **Curly brackets** (`{}`) denote a set of comma separated alternatives: `{banana,pineapple}` matches either `banana` or `pineapple`.
-
-- **Backslash** (`\`) “escapes” a special character so that it loses its special meaning. For example, `\{banana\}` matches `{banana}` exactly and does not denote a set of alternatives as above. *Escaped characters are not supported on Windows.*
-
-- A pattern beginning with `/` or `./` matches in the root of the folder only. `/foo` or `./foo` matches `foo` but not `subdir/foo`.
-
-- A pattern beginning with a `(?i)` prefix enables case-insensitive pattern matching. `(?i)test` matches `test`, `TEST` and `tEsT`. The `(?i)` prefix can be combined with other patterns, for example the pattern `(?i)picture*.png` indicates that `Picture1.PNG` should be synchronized. On Mac OS and Windows, patterns are always case-insensitive.
-
-
-:::info Note
-
-Prefixes can be specified in any order (e.g. “(?i){foo,bar}/\*/bar”), but cannot be in a single pair of parentheses (not "{foo,(?i),bar}/*/bar").
-
-:::
-
-
-
-### Example
-
-Given a directory layout:
+给定目录布局：
 
 ```shell
 .DS_Store
@@ -72,14 +56,14 @@ nocalhost/
     team/
 ```
 
-and with following config:
+以及以下配置：
 
 ```yaml
 SyncFilePattern:
   - frobble
   - quuz
   - ./nocalhost
-  
+
 IgnoreFilePattern:
   - foo
   - *2
@@ -88,11 +72,11 @@ IgnoreFilePattern:
   - nocalhost/t**
 ```
 
-The priority of the `IgnoreFilePattern` is higher than `SyncFilePattern` and the end result becomes:
+`IgnoreFilePattern`的优先级高于`SyncFilePattern`，最终结果变为：
 
 ```shell
 foo           # ignored, matches IgnoreFilePattern "foo"
-foofoo        # synced, does not match IgnoreFilePattern "foo", but would match "foo*" or "*foo" 
+foofoo        # synced, does not match IgnoreFilePattern "foo", but would match "foo*" or "*foo"
 bar/          # synced, no such config, so synced
     baz       # synced, no such config, so synced
     quux      # ignored, matches IgnoreFilePattern "qu*"

@@ -4,14 +4,13 @@ title: nhctl describe
 
 Describe application info
 
-
-## Usage
+## 用法
 
 ```
 nhctl describe [NAME] [flags]
 ```
 
-## Flags
+## 标志
 
 ```
 Flags:

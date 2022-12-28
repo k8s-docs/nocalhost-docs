@@ -1,121 +1,59 @@
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
 # Manage Cluster
 
-## Connect to Kubernetes Cluster
+## 连接到 Kubernetes 群集
 
-Nocalhost supports multi cluster management, There are two methods that you can use to connect to Kubernetes cluster:
+Nocalhost 支持多集群管理，您可以使用两种方法连接到 Kubernetes 群集：
 
-**Connect By KubeConfig**
+**由 kubeconfig 连接**
 
-Select the `KubeConfig` file from any local directory.
+从任何本地目录中选择`KubeConfig`文件。
 
-:::tip Default KubeConfig
+!!! tip "Default KubeConfig"
 
-Nocalhost will try to load `KubeConfig` from your local `~/.kube/config` by default.
+    Nocalhost will try to load `KubeConfig` from your local `~/.kube/config` by default.
 
-:::
-
-**Paste KubeConfig as Text**
+**将 kubeconfig 粘贴为文本**
 
 Paste the `KubeConfig` as a text.
 
-:::tip Get KubeConfig
+!!! tip "Get KubeConfig"
 
-You can use the following command to view your `KubeConfig`, copy and paste to the Nocalhost plugin.
+    You can use the following command to view your `KubeConfig`, copy and paste to the Nocalhost plugin.
 
-```bash
-kubectl config view --minify --raw --flatten
-```
+    ```bash
+    kubectl config view --minify --raw --flatten
+    ```
 
-:::
+=== "vscode"
 
-<Tabs
-  defaultValue="vscode"
-  values={[
-    {label: 'VS Code', value: 'vscode'},
-    {label: 'JetBrains', value: 'jet'},
-  ]}>
-<TabItem value="vscode">
+    ![Connect to cluster in VS Code](../img/opt/vscode-add-cluster.gif)
 
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/opt/vscode-add-cluster.gif')} width="250" />
-  <figcaption>Connect to cluster in VS Code</figcaption>
-</figure>
+=== "jet"
 
-</TabItem>
-  
-<TabItem value="jet">
-
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/opt/idea-connect-cluster.gif')} width="600" />
-  <figcaption>Connect to cluster in JetBrains IDE</figcaption>
-</figure>
-
-</TabItem>
-</Tabs>
+    ![Connect to cluster in JetBrains IDE](../img/opt/idea-connect-cluster.gif)
 
 ## Remove Cluster
 
-:::note KubeConfig Unchanged
+!!! note "KubeConfig Unchanged"
 
-Nocalhost will only remove the cluster from inspector, it will not modify your `KubeConfig`.
+    Nocalhost will only remove the cluster from inspector, it will not modify your `KubeConfig`.
 
-:::
+=== "vscode"
 
-<Tabs
-  defaultValue="vscode"
-  values={[
-    {label: 'VS Code', value: 'vscode'},
-    {label: 'JetBrains', value: 'jet'},
-  ]}>
-<TabItem value="vscode">
+    ![Remove cluster in VS Code](../img/opt/vscode-remove-cluster.gif)
 
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/opt/vscode-remove-cluster.gif')} width="290" />
-  <figcaption>Remove cluster in VS Code</figcaption>
-</figure>
+=== "jet"
 
-</TabItem>
-  
-<TabItem value="jet">
-
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/opt/idea-remove-cluster.gif')} width="600" />
-  <figcaption>Remove cluster in JetBrains IDE</figcaption>
-</figure>
-
-</TabItem>
-</Tabs>
+    ![Remove cluster in JetBrains IDE](../img/opt/idea-remove-cluster.gif)
 
 ## View KubeConfig
 
 Right-click the specified cluster and select `View KubeConfig`, the Nocalhost plugin will open the `KubeConfig` of the cluster.
 
-<Tabs
-  defaultValue="vscode"
-  values={[
-    {label: 'VS Code', value: 'vscode'},
-    {label: 'JetBrains', value: 'jet'},
-  ]}>
-<TabItem value="vscode">
+=== "vscode"
 
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/opt/vscode-view-config.gif')} width="600" />
-  <figcaption>View KubeConfig in VS Code</figcaption>
-</figure>
+    ![View KubeConfig in VS Code](../img/opt/vscode-view-config.gif)
 
-</TabItem>
-  
-<TabItem value="jet">
+=== "jet"
 
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/opt/idea-view-config.gif')} width="600" />
-  <figcaption>View KubeConfig in JetBrains IDE</figcaption>
-</figure>
-
-</TabItem>
-</Tabs>
-
+    ![View KubeConfig in JetBrains IDE](../img/opt/idea-view-config.gif)

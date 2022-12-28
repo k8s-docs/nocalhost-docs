@@ -4,16 +4,16 @@ title: nhctl apply
 
 Apply manifest
 
-## Usage
+## 用法
 
-```bash
+```console
 Usage:
   nhctl apply [NAME] [MANIFEST] [flags]
 ```
 
-## Flags
+## 标志
 
-```bash
+```console
 Flags:
   -h, --help   help for apply
 

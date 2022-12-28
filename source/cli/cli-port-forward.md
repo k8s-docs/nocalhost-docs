@@ -16,13 +16,13 @@ Available Commands:
 
 ## nhctl port-forward end
 
-### Usage
+### 用法
 
 ```
 nhctl port-forward end [NAME] [flags]
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:
@@ -39,13 +39,13 @@ Global Flags:
 
 ## nhctl port-forward list
 
-### Usage
+### 用法
 
 ```
 nhctl port-forward list [NAME] [flags]
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:
@@ -61,13 +61,13 @@ Global Flags:
 
 ## nhctl port-forward start
 
-### Usage
+### 用法
 
 ```
 nhctl port-forward start [NAME] [flags]
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:
@@ -86,5 +86,3 @@ Global Flags:
       --kubeconfig string   the path of the kubeconfig file
   -n, --namespace string    kubernetes namespace
 ```
-
-

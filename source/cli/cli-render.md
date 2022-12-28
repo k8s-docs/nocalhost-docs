@@ -4,13 +4,13 @@ title: nhctl render
 
 Render the file for debugging
 
-## Usage
+## 用法
 
 ```
 nhctl render [NAME] [flags]
 ```
 
-## Flags
+## 标志
 
 ```
 Flags:

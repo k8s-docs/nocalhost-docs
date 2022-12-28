@@ -2,67 +2,29 @@
 title: Access Terminal
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import useBaseUrl from '@docusaurus/useBaseUrl';
+# 访问容器的终端
 
-# Access Container's Terminal
+Nocalhost 提供了两种模式来访问目标容器的端子。
 
-Nocalhost provides two modes to access the terminal of a target container.
-
-- **Open Remote Terminal:** access container's terminal right within IDE's build-in terminal.
-- **Copy Terminal Exec Command:** Nocalhost will copy the execution command of remote terminal, you can paste this command in any terminal tools, run it then access to container's terminal.
+- **打开远程终端:** 访问 IDE 构建终端内的容器终端。
+- **复制终端执行命令:** Nocalhost 将复制远程终端的执行命令，您可以将此命令粘贴到任何终端工具中，然后运行它，然后访问容器的终端。
 
 ## VS Code
 
-<Tabs
-defaultValue="open"
-values={[
-{label: 'Open Remote Terminal', value: 'open'},
-{label: 'Copy Terminal Exec Command', value: 'copy'},
-]}>
-<TabItem value="open">
+=== "open"
 
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/plugin/vs-terminal.gif')} />
-  <figcaption>Open terminal within VS Code</figcaption>
-</figure>
+    ![VS代码中的开放终端](../../img/plugin/vs-terminal.gif)
 
-</TabItem>
-  
-<TabItem value="copy">
+=== "copy"
 
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/plugin/vs-terminal-exec.gif')} />
-  <figcaption>VS Code copy terminal exec command and run in other terminal</figcaption>
-</figure>
-
-</TabItem>
-</Tabs>
+    ![VS代码复制终端EXEC命令并在其他终端中运行](../../img/plugin/vs-terminal-exec.gif)
 
 ## JetBrains
 
-<Tabs
-defaultValue="jb-open"
-values={[
-{label: 'Open Remote Terminal', value: 'jb-open'},
-{label: 'Copy Terminal Exec Command', value: 'jb-copy'},
-]}>
-<TabItem value="jb-open">
+=== "jb-open"
 
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/plugin/jb-terminal.gif')} />
-  <figcaption>Open terminal in JetBrains</figcaption>
-</figure>
+    ![喷气式末端](../../img/plugin/jb-terminal.gif)
 
-</TabItem>
-  
-<TabItem value="jb-copy">
+=== "jb-copy"
 
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/plugin/jb-terminal-exec.gif')} />
-  <figcaption>Open terminal in JetBrains</figcaption>
-</figure>
-
-</TabItem>
-</Tabs>
+    ![喷气式末端](../../img/plugin/jb-terminal-exec.gif)

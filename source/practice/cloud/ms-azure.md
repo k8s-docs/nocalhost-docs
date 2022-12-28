@@ -1,11 +1,9 @@
 # Microsoft Azure
 
-:::note Requirements
-- 
-:::
+!!! note Requirements
+
+- :::
 
 ## Connect by KubeConfig
 
-
 ## FAQ
-

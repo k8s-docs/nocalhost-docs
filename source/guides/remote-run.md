@@ -1,12 +1,8 @@
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import useBaseUrl from '@docusaurus/useBaseUrl';
+# 远程运行
 
-# Remote Run
+当您在 Kubernetes 群集中启动新容器时，Kubernetes 将不会在此容器中启动任何进程。Nocalhost 可以使用运行配置在 Kubernetes 群集中运行代码，喜欢在 IDE 内使用运行功能。
 
-When you start the new container in Kubernetes cluster, Kubernetes will not start any process within this container. Nocalhost can uses run configurations to run your code in Kubernetes cluster like to use the run feature within IDE. 
-
-## Supported IDEs
+## 支持的 IDE
 
 <table>
   <tbody>
@@ -69,168 +65,136 @@ When you start the new container in Kubernetes cluster, Kubernetes will not star
   </tbody>
 </table>
 
+## 远程运行过程
 
-
-## Remote Run Process
-
-1. Select the workload that you want to run
+1. 选择要运行的工作负载
 2. Right-click the workload and select **`Dev Config`**, [configure your run configuration](#configuration)
 3. Then right-click this workload again and select **Remote Run**
 4. Nocalhost will automatically enter the `DevMode` and start remote run
 
-### Remote Run Configurations in IDE
+### IDE 中的远程运行配置
 
 Before starting remote run, if you do not have a Nocalhost IDE run configuration under an existing workload, Nocalhost will create a new IDE run configuration according to your [Nocalhost configuration](#configuration). Different IDE has different configuration names and templates.
 
-:::tip Multi Configs
+!!! tip "Multi Configs"
 
-If you already have a Nocalhost IDE run configuration under the existing workload, Nocalhost will use the first one to start running. You can change the order in the `Run/Debug Configurations` window within IDE.
+    If you already have a Nocalhost IDE run configuration under the existing workload, Nocalhost will use the first one to start running. You can change the order in the `Run/Debug Configurations` window within IDE.
 
-<figure className="img-frame">
-  <img className="gif-img" src={useBaseUrl('/img/debug/debug-configs.png')} />
-  <figcaption>Nocalhost run configurations in IDE</figcaption>
-</figure>
+    ![Nocalhost run configurations in IDE](../img/debug/debug-configs.png)
 
-:::
+## 配置
 
-## Configuration
+开发环境之间的开发环境不同。您应该根据实际情况配置远程运行配置。
 
-The development environment is different between developers. You should configure remote run configurations according to the actual situation.
+### 示例配置
 
-### Sample Configuration
+=== "java"
 
-<Tabs
-  defaultValue="java"
-  values={[
-    {label: 'Java', value: 'java'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'PHP', value: 'php'},
-    {label: 'Node.js', value: 'node'},
-  ]}>
-<TabItem value="java">
+    ```yaml title="Nocalhost Configs"
+    name: java-remote-run
+    serviceType: deployment
+    containers:
+      - name: ""
+        dev:
+            ...
+            command:
+              run:
+                - /home/nocalhost-dev/gradlew
+                - bootRun
+            ...
+    ```
 
-```yaml {7,8} title="Nocalhost Configs"
-name: java-remote-run
-serviceType: deployment
-containers:
-  - name: ""
-    dev:
-        ...
-        command:
-          run:
-            - /home/nocalhost-dev/gradlew
-            - bootRun
-        ...
-```
+=== "python"
 
-</TabItem>
-  
-<TabItem value="python">
+    ```yaml title="Nocalhost Configs"
+    name: python-remote-run
+    serviceType: deployment
+    containers:
+      - name: ""
+        dev:
+          ...
+            command:
+              run:
+                - ./run.sh
+            ...
 
-```yaml {7,8} title="Nocalhost Configs"
-name: python-remote-run
-serviceType: deployment
-containers:
-  - name: ""
-    dev:
-       ...
-        command:
-          run:
-            - ./run.sh
-        ...
+    ```
 
-```
+    ```yaml title="run.sh"
+    #! /bin/sh
 
-```yaml title="run.sh"
+    pip3 install --no-cache-dir -r ./requirements.txt
 
-#! /bin/sh
+    export DEBUG_DEV=0
+    export FLASK_DEBUG=0
+    export FLASK_ENV=development
 
-pip3 install --no-cache-dir -r ./requirements.txt
+    flask run --host=0.0.0.0 --port=9999
+    ```
 
-export DEBUG_DEV=0
-export FLASK_DEBUG=0
-export FLASK_ENV=development
+=== "go"
 
-flask run --host=0.0.0.0 --port=9999
+    ```yaml title="Nocalhost Configs"
+    name: go-remote-run
+    serviceType: deployment
+    containers:
+      - name: ""
+        dev:
+            ...
+            command:
+              run:
+                - ./run.sh
+            ...
 
-```
-</TabItem>
-  
-<TabItem value="go">
+    ```
 
-```yaml {7,8} title="Nocalhost Configs"
-name: go-remote-run
-serviceType: deployment
-containers:
-  - name: ""
-    dev:
-        ...
-        command:
-          run:
-            - ./run.sh
-        ...
+    ```yaml title="run.sh"
+    #! /bin/sh
 
-```
+    export GOPROXY=https://goproxy.cn
+    go run app.go
+    ```
 
-```yaml title="run.sh"
-#! /bin/sh
+=== "php"
 
-export GOPROXY=https://goproxy.cn
-go run app.go
-```
+    ```yaml title="Nocalhost Configs"
+    name: php-remote-run
+    serviceType: deployment
+    containers:
+      - name: ""
+        dev:
+            ...
+            command:
+              run:
+                - ./run.sh
+            ...
 
-</TabItem>
-  
-<TabItem value="php">
+    ```
 
-```yaml {7,8} title="Nocalhost Configs"
-name: php-remote-run
-serviceType: deployment
-containers:
-  - name: ""
-    dev:
-        ...
-        command:
-          run:
-            - ./run.sh
-        ...
+    ```yaml title="run.sh"
+    #！/bin/sh
 
-```
+    php -t ./ -S 0.0.0.0:9999;
+    ```
 
-```yaml title="run.sh"
+=== "node"
 
-#！/bin/sh
+    ```yaml title="Nocalhost Configs"
+    name: node-remote-run
+    serviceType: deployment
+    containers:
+      - name: ""
+        dev:
+            ...
+            command:
+              run:
+                - ./run.sh
+            ...
 
-php -t ./ -S 0.0.0.0:9999;
+    ```
 
-```
+    ```yaml title="run.sh"
+    #！/bin/sh
 
-</TabItem>
-
-<TabItem value="node">
-
-```yaml {10,27} title="Nocalhost Configs"
-name: node-remote-run
-serviceType: deployment
-containers:
-  - name: ""
-    dev:
-        ...
-        command:
-          run:
-            - ./run.sh
-        ...
-
-```
-
-```yaml title="run.sh"
-
-#！/bin/sh
-
-npm install && node ratings.js 9080
-
-```
-
-</TabItem>
-</Tabs>
+    npm install && node ratings.js 9080
+    ```

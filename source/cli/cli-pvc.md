@@ -17,14 +17,13 @@ Available Commands:
 
 Clean up PersistVolumeClaims
 
-
-### Usage
+### 用法
 
 ```
 nhctl pvc clean [flags]
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:
@@ -43,13 +42,13 @@ Global Flags:
 
 List PersistVolumeClaims
 
-### Usage
+### 用法
 
 ```
 nhctl pvc list [flags]
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:

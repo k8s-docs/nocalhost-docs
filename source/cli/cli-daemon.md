@@ -18,21 +18,21 @@ Available Commands:
 
 ## nhctl daemon info
 
-### Usage
+### 用法
 
 ```
 nhctl daemon info
 ```
 
 ```
-Example:
+!!! example
 
 > nhctl daemon info
 
 > {"Version":"v0.4.12","CommitId":"0f02d7f90335076b502bca3f40ff42bd37ee55e6","NhctlPath":".nh/bin/nhctl","Upgrading":false}
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:
@@ -49,20 +49,20 @@ Global Flags:
 
 重启 nhctl daemon
 
-### Usage
+### 用法
 
 ```
 nhctl daemon restart
 ```
 
 ```
-Example:
+!!! example
 
 > nhctl daemon restart
 > RestartDaemonServerCommand has been sent
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:
@@ -79,13 +79,13 @@ Global Flags:
 
 Manually start nhctl daemon
 
-### Usage
+### 用法
 
 ```
 nhctl daemon start [flags]
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:
@@ -103,20 +103,20 @@ Global Flags:
 
 View nhctl daemon status
 
-### Usage
+### 用法
 
 ```
 nhctl daemon status
 ```
 
 ```
-Example:
+!!! example
 
 > nhctl daemon status
 > {"portForwardList":[]}
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:
@@ -133,13 +133,13 @@ Global Flags:
 
 Manually stop nhctl daemon
 
-### Usage
+### 用法
 
 ```
 nhctl daemon stop
 ```
 
-### Flags
+### 标志
 
 ```
 Flags:
@@ -151,5 +151,3 @@ Global Flags:
       --kubeconfig string   the path of the kubeconfig file
   -n, --namespace string    kubernetes namespace
 ```
-
-
