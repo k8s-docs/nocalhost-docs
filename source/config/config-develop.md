@@ -41,7 +41,7 @@ Apart from configuring `command.debug`, you also need to enter a debug port. For
 
 !!! info "How to use one-click debugging"
 
-    See more instructions in [Remote Debugging](../guides/debug/jetbrains-debug.mdx).
+    See more instructions in [Remote Debugging](../guides/debug/jetbrains-debug.md).
 
 ## 配置热重载
 

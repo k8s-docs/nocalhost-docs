@@ -13,7 +13,7 @@ title: Configure
 
 Zero-configuration means to enter `DevMode` without any Nocalhost configuration. The only thing needed is to select or type in a development image.
 
-![⭐️   Start DevMode without any configuration   ⭐️ ](./img/config/dev-without-config.gif)
+![⭐️   Start DevMode without any configuration   ⭐️ ](../img/config/dev-without-config.gif)
 
 ### 零配置的行为期望
 

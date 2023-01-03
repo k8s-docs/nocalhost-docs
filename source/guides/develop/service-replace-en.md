@@ -16,4 +16,4 @@ When entering `Replace DevMode`, Nocalhost will do the following work on the wor
 
 Note that the development container will not retain the previous work after entering DevMode, so all traffic in the cluster requesting access to that workload will fail. Therefore, you need to run the business process in the development container. Nocalhost will automatically synchronize the local source code to the development container, so you can see that the changes will take effect after compiling and running the code, as shown below.
 
-![Coding in VS Code](./img/opt/code-change2.gif)
+![Coding in VS Code](../../img/opt/code-change2.gif)

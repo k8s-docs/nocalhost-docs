@@ -10,7 +10,7 @@ title: Quick Start
 
 ## 部署配置结构
 
-[Dev Config](config-overview-en.md) is a part of Deploy Config. The simplest structure of Deploy Config is as follows:
+[Dev Config](../config-overview-en.md) is a part of Deploy Config. The simplest structure of Deploy Config is as follows:
 
 ```yaml
 application:
@@ -86,11 +86,11 @@ The directories are as follows, `.nocalhost` folder is created in the root direc
 
 You can right-click any `namespace` on Nocalhost plug-in, then click `Deploy Application` and select `clone from git`. Enter `https://github.com/nocalhost/bookinfo` to Git URL column and `manifest/config/example` to the branch column.
 
-![](../img/config/deploy-config-install-manifest.png)
+![](../../img/config/deploy-config-install-manifest.png)
 
 Nocalhost will deploy this RawManifest application after you click OK. Now, you can find `bookinfo` under `namespace`.
 
-![](../img/config/deploy-config-install-manifest-success.png)
+![](../../img/config/deploy-config-install-manifest-success.png)
 
 #### 自定义 resourcePath 和 ignoredPath
 
@@ -210,7 +210,7 @@ Dev Config can be embedded in Deploy Config. That brings a benefit that Nocalhos
 
 The bookinfo application we used above has several workloads which are deployment type. Now, let us configure them as follows.
 
-Apart from the above minimized configurations, we introduce an array named services, in which the elements are **[Dev Config](config-spec-en.md)** .
+Apart from the above minimized configurations, we introduce an array named services, in which the elements are **[Dev Config](../config-spec-en.md)** .
 
 ```yaml
 application:
@@ -275,6 +275,6 @@ application:
 
 !!! tip "Use the QuickStart sample to experience"
 
-    The **[demo application](../guides/deploy/deploy-demo.md)** embeds Dev Config in Deploy Config.
+    The **[demo application](../../guides/deploy/deploy-demo.md)** embeds Dev Config in Deploy Config.
 
     After deploying demo application, just right-click a workload under this application, such as `Deployment / details`. You will find that it has been configured with a series of development configurations in advance, so you can directly enter the Dev Mode based on them.

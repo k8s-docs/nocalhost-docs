@@ -6,7 +6,7 @@ title: Spec
 
 Nocalhost 的配置可以分为三个部分。
 
-## 1. [开发容器配置](config-dev-container-en.md)
+## 1. [开发容器配置](config-dev-container.md)
 
 ```yaml title="第一部分是开发容器配置，包括："
 name: nocalhost-api

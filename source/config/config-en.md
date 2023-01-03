@@ -23,7 +23,7 @@ Nocalhost 支持多种配置 Devmode 的方法，并为各种丰富的用法方�
 
 如果您想了解有关多种配置开发配置方式的更多信息，则可以单击本节的详细信息。
 
-## [部署配置](config-deployment-en.md)
+## [部署配置](deployment/README.md)
 
 Nocalhost 具有应用程序部署的功能。在`Nocalhost Server`下，这是一个高频功能。
 Nocalhost 为工作负载提供了 **依赖控制和 ENV 注入** 之类的功能。

@@ -84,7 +84,7 @@ configuring with config.yaml supports the use of include syntax to achieve a hig
 
 ### Example 1: Combining config.yaml with the include syntax
 
-Here we use [Deployment configuration example](./config-deployment-quickstart.md#example) to demonstrate.
+Here we use [Deployment configuration example](./quickstart.md#example) to demonstrate.
 
 config.yaml:
 

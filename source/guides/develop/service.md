@@ -179,9 +179,9 @@ Nocalhost 将加载 Nocalhost 配置的`container[*].dev`部分。
 #### 开发映像
 
 Nocalhost 在输入 DevMode 之前需要知道要使用哪个`development image`。
-Nocalhost 将使用[`dev.image`](../../config/config-dev-container-en.md#DevImage)中定义的映像或要求您输入一个映像。
+Nocalhost 将使用[`dev.image`](../../config/config-dev-container.md#DevImage)中定义的映像或要求您输入一个映像。
 
-您可以使用我们提供的 Docker 映像，也可以使用任何`development image`的[自定义映像](../../config/config-dev-container-en.md#DevImage).
+您可以使用我们提供的 Docker 映像，也可以使用任何`development image`的[自定义映像](../../config/config-dev-container.md#DevImage).
 
 ![在VS代码中选择开发映像](../../img/develop/vs-choose-image.jpg)
 
@@ -210,7 +210,7 @@ Nocalhost 将使用[`dev.image`](../../config/config-dev-container-en.md#DevImag
 1. **替换 Pods** 根据你的[`replacing port` 配置](../../config/config-spec-en.md)
 2. **转发端口** 根据你的[`port-forwarding` 配置](../../config/config-enhance.md#开发模式后自动端口转发)
 3. **同步文件更改** 根据[`dev.sync`](../../config/config-enhance.md#文件同步)部分的本地项目目录和 Kubernetes Pod 在本节之间
-4. **打开终端** 在容器启动后，就在 IDE 内。打开的工作目录是根据您的[`dev.workdir`](.././config/config-dev-container-en.md#)(The Remote Directory for File Synchronization)部分的。
+4. **打开终端** 在容器启动后，就在 IDE 内。打开的工作目录是根据您的[`dev.workdir`](../../config/config-dev-container.md#)(The Remote Directory for File Synchronization)部分的。
 
 终端会话开始后，您就可以启动应用程序并在容器内部工作。
 

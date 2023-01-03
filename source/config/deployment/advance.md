@@ -12,11 +12,11 @@ if you do not use `Nocalhost Server`, then additional deployment of `Nocalhost D
 
 !!! info
 
-    [Nocalhost提供哪些部署配置？](config-deployment-spec.md) 介绍哪些部署配置需要额外部署`nocalhost dep`.
+    [Nocalhost提供哪些部署配置？](./spec.md) 介绍哪些部署配置需要额外部署`nocalhost dep`.
 
 ## 使用 ConfigMap 进行部署配置
 
-To make a simple deployment configuration is mentioned in [Introduction to Deployment Configuration Nocalhost Basic Deployment Configuration](config-deployment-quickstart.md). Combining with [What configuration methods are supported by Nocalhost-place the configuration in configmap](configure-en.md#configuration-in-configmap), we can get the configuration:
+To make a simple deployment configuration is mentioned in [Introduction to Deployment Configuration Nocalhost Basic Deployment Configuration](./quickstart.md). Combining with [What configuration methods are supported by Nocalhost-place the configuration in configmap](../configure-en.md#configuration-in-configmap), we can get the configuration:
 
 We have prepared an demo for this, which will automatically deploy `Nocalhost Dep`, and use the way of ConfigMap to make the deployment configuration.
 
@@ -123,7 +123,7 @@ application:
 
 ## 使用注释进行部署配置
 
-The method of usage is exactly the same as [Which configuration methods Nocalhost supports-place the configuration in annotations](configure-en.md#configuration-in-annotations).
+The method of usage is exactly the same as [Which configuration methods Nocalhost supports-place the configuration in annotations](../configure-en.md#configuration-in-annotations).
 
 !!! danger "Extra attention"
 

@@ -6,7 +6,7 @@ Nocalhost provides an easy way to help you manager Kubernetes applications deplo
 
 When you expand any Kubernetes namespace in Nocalhost plugin, you may have questions seeing something name `default` and <img src={useBaseUrl('/img/icons/app_active.svg')} width="20" /> icon.
 
-![](../img/plugin/default-app.png)
+![](../../img/plugin/default-app.png)
 
 In Kubernetes, a [workload](https://kubernetes.io/docs/concepts/workloads/) is an application, whether your workload is a single component or several that work together.
 
@@ -34,13 +34,13 @@ You can deploy Kubernetes manifests or Kustomizations by using Nocalhost plugin.
 1. Right-click any namespace and select **Apply Manifest**
 2. Select a Kubernetes manifest file or a folder that contains group of manifest files
 
-![Deploy Kubernetes manifest](../img/plugin/deploy-manifest.gif)
+![Deploy Kubernetes manifest](../../img/plugin/deploy-manifest.gif)
 
 ## Deploy an Configured Nocalhost Application
 
 !!! danger "Configuration Required"
 
-    You need to have configured `config.yaml` before deploy applications. [Learn how to configure application deployment](../../config/config-deployment-quickstart.md).
+    You need to have configured `config.yaml` before deploy applications. [Learn how to configure application deployment](../../config/deployment/quickstart.md).
 
 === "vscode"
 
@@ -48,14 +48,14 @@ You can deploy Kubernetes manifests or Kustomizations by using Nocalhost plugin.
     2. Click on the <img src={useBaseUrl('/img/icons/install-app-icon.jpg')} width="20" /> icon to deploy application
     3. Choose the installation source
 
-    ![Select the installation source](./img/plugin/vs-install-app.png)
+    ![Select the installation source](../../img/plugin/vs-install-app.png)
 
 === "jet"
 
     1. Right click a namespace, click `Install Application`
     2. Choose the installation source
 
-    ![Select the installation source](./img/plugin/jb-install-app.png)
+    ![Select the installation source](../../img/plugin/jb-install-app.png)
 
 ### Installation Source
 

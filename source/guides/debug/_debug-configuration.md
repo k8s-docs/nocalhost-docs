@@ -107,7 +107,7 @@ python -m debugpy --listen 9009 --wait-for-client productpage.py 9080
 
 Nocalhost using pydevd to debug Python application.
 
-![Principle of Remote Python Debugging](./img/debug/python-debug.jpg)
+![Principle of Remote Python Debugging](../../img/debug/python-debug.jpg)
 
 </TabItem>
   
@@ -164,7 +164,7 @@ php -t ./ -S 0.0.0.0:9999;
 
 Nocalhost using Xdebug to debug PHP applications.
 
-![Principle of Remote PHP Debugging](./img/debug/php-debug.jpg)
+![Principle of Remote PHP Debugging](../../img/debug/php-debug.jpg)
 
 </TabItem>
 

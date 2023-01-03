@@ -77,7 +77,7 @@
 
 !!! warning "关于前提"
 
-    如果您正在遇到DevMode在“前提K8S群集”中，则需要[配置SideCar映像地址](./config/config-dev-container-en#sidecar-image-customization)并将镜像推到您自己的存储库中。
+    如果您正在遇到DevMode在“前提K8S群集”中，则需要[配置SideCar映像地址](./config/config-dev-container#sidecar-image-customization)并将镜像推到您自己的存储库中。
 
 ## 4. 更改代码并查看结果
 

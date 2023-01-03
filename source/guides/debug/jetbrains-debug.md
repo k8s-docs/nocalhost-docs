@@ -84,7 +84,7 @@ Before entering debug mode, if you do not have a Nocalhost IDE debug configurati
 
 If you already have a Nocalhost IDE debug configuration under the existing workload, Nocalhost will use the first one to start debugging. You can change the order in the `Run/Debug Configurations` window within IDE.
 
-![Nocalhost debugging configurations in IDE](./img/debug/debug-configs.png)
+![Nocalhost debugging configurations in IDE](../../img/debug/debug-configs.png)
 
 :::
 

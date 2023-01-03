@@ -5,6 +5,7 @@ site_author: Nocalhost
 site_description: Nocalhost is an open-source toolsets help to build cloud-native applications easier and faster
 docs_dir: source
 site_dir: docs
+dev_addr: 127.0.0.1:8005
 
 # Repository
 repo_name: k8s-docs/nocalhost-docs
@@ -111,12 +112,14 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
   - pymdownx.highlight:
       anchor_linenums: true
+      linenums: true
   - pymdownx.inlinehilite
+  - pymdownx.snippets
   - pymdownx.keys
   - pymdownx.magiclink:
       repo_url_shorthand: true
-      user: k8s-docs
-      repo: nocalhost-docs
+      user: squidfunk
+      repo: mkdocs-material
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.superfences:
@@ -129,6 +132,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  - pymdownx.magiclink
 
 # Page tree
 nav:
@@ -143,10 +147,14 @@ nav:
       - 应用部署:
           - 使用 Nocalhost 进行应用部署: guides/deploy/deploy-app.md
           - 部署示例应用: guides/deploy/deploy-demo.md
+          - helm: guides/deploy/deploy-from-helm.md
       - 开发:
           - develop-service: guides/develop/service.md
+          - guides/develop/service-crd-en.md
           - DevMode(Replace): guides/develop/service-replace.md
+          - guides/develop/service-replace-en.md
           - DevMode(Duplicate): guides/develop/service-dup.md
+          - guides/develop/service-dup-en.md
           - CustomResources: guides/develop/service-crd.md
           - VPN proxy: guides/develop/service-vpn.md
           - DevMode Mesh: guides/develop/service-dup-mesh.md
@@ -159,12 +167,14 @@ nav:
           - 查看日志: guides/debug/log-viewer.md
       - 远程运行: guides/remote-run.md
       - 热加载: guides/hot-reload.md
+      - guides/clear-pvc.md
+      - guides/debug/_debug-configuration.md
   - 配置:
       - 概述: config/config-en.md
       - 配置是什么？: config/config-overview-en.md
       - Spec:
           - 规格: config/config-spec-en.md
-          - 容器配置: config/config-dev-container-en.md
+          - 容器配置: config/config-dev-container.md
           - 增强配置:
               - 增强: config/config-enhance.md
               - 模式匹配: config/config-pattern.md
@@ -180,6 +190,12 @@ nav:
       - 云兼容:
           - K8兼容: practice/cloud/k8s-compatible.md
           - 阿里云: practice/cloud/ali-ack.md
+          - practice/kubesphere.md
+          - practice/cloud/amazon-eks.md
+          - practice/cloud/google-gke.md
+          - practice/cloud/ms-azure.md
+          - practice/cloud/rancher-rke.md
+          - practice/cloud/tencent-tke.md
       - 预释放:
           - kubesphere: practice/pre-release/kubesphere.md
   - NHCTL:
@@ -219,6 +235,7 @@ nav:
       - 管理应用程序: server/manage-app.md
       - Nocalhost Dep: server/nh-dep.md
       - kubesphere里部署: server/deploy-in-kubesphere.md
+      - server/deploy-in-kubesphere-en.md
   - 更新日志:
       - 0.6.x: changelogs/0.6.x.md
       - 0.5.x: changelogs/0.5.x.md
