@@ -2,13 +2,16 @@
 title: Spec
 ---
 
-!!! danger "Some configurations require additional components"
+!!! danger "一些配置需要其他组件"
 
-    Some functions of the deployment configuration rely on the **Nocalhost-Dep component**. If you use Nocalhost Server, we will automatically install this component for you. Otherwise an additional installation is required.
+    部署配置的某些功能取决于 **Nocalhost-Dep 组件**。
+    如果您使用Nocalhost服务器，我们将为您自动安装此组件。
+    否则需要额外的安装。
 
-    If the **Nocalhost-Dep component** is not installed, some functions will be restricted. This article will mark those functions that need **Nocalhost-Dep**.
+    如果未安装**Nocalhost-Dep component**，则将限制一些功能。
+    本文将标记需要**Nocalhost-Dep**的功能.
 
-## Startup dependency control ([component dependency](#danger))
+## 启动依赖性控制 ([组件依赖性](#danger))
 
 !!! example
 
@@ -30,13 +33,16 @@ title: Spec
               - "job-name=init-job"
     ```
 
-When a resource declares `dependLabelSelector` in the deployment configuration, the characters in the `pods` array represent the labels of the pods to be waited for. The format is key-value pairs. The characters in the `jobs` array represent the labels of the jods to be waited for. The format is also key-value pairs.
+当资源在部署配置中声明`dependLabelSelector`时, `pods`数组中的字符表示要等待的 Pod 的标签.
+格式是键值对。`jobs`数组中的字符代表要等待的 JOD 的标签。
+格式也是键值对。
 
-Both `pods` and `jobs` are optional. When you actually deploy your application, it will generate an `initContainer` for the specified workload, wait for the status of all pods matching the label to be `Ready`, and wait for the status of all jobs matching the label to be `Succeeded`.
+`pods` and `jobs`都是可选的。
+当您实际部署应用程序时, 它将为指定的工作负载生成一个`initContainer`, 等待所有与标签匹配的 POD 的状态`Ready`, 并等待与标签相匹配的所有工作状态`Succeeded`.
 
-## Injecting Environment variable ([Component dependency](#danger))
+## 注射环境变量 ([组件依赖性](#danger))
 
-### Injecting Global variable
+### 注入全局变量
 
 !!! example
 
@@ -72,7 +78,7 @@ Injecting global variables needs to be declared at the level of `application`. D
 
 The priority of `env` is higher than that of `envFrom`
 
-### Injecting variables at the level of container
+### 在容器级别注入变量
 
 !!! example
 
@@ -102,7 +108,7 @@ The priority of `env` is higher than that of `envFrom`
 
 The container-level variable injection is declared in `application.services[*].containers[*].install`, indicating that the corresponding variables are injected into the corresponding container during deployment. The rules of `env` and `envFrom` are in line with the application level's.
 
-## Automatic port forwarding after installation
+## 安装后自动端口转发
 
 !!! example
 
@@ -129,7 +135,7 @@ The configuration rules are similar to the container and variable injection decl
 
 The port forwarding after installation is as it's name implies. After the application is installed, it can automatically forward port to the local for some services. For instance, database, MQ and other commonly used services' ports are suitable for automatic forwarding and configuration rules after installation. The port forwarding rules are consistent with K8s, namely `local port: container port`.
 
-## Hook
+## 钩
 
 !!! example
 
@@ -176,7 +182,7 @@ Nocalhost supports injecting various hooks in the life cycle of the application.
 
     By analogy, the Upgrade Hook and Delete Hook will not roll back after the execution fails, and only prompt failure.
 
-## The customization of the HelmValues
+## HelmValues 的定制
 
 !!! example
 
@@ -201,7 +207,7 @@ Nocalhost supports injecting various hooks in the life cycle of the application.
       ##### end
     ```
 
-!!! tip "HelmValues supports two kinds of syntax"
+!!! tip "HelmValues 支持两种语法"
 
     - The first syntax only supports pure strings and has a higher priority.
     - The second syntax is the same as `values.yaml` and can be interspersed with Helm syntax.

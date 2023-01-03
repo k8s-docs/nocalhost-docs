@@ -2,28 +2,30 @@
 title: Deploy Config
 ---
 
-[Overview](config-en.md) / [Deploy Config](config-deployment-en.md)
+我们将在本节中介绍 Nocalhost 部署配置。
 
-We will introduce Nocalhost Deploy config in this section.
+Nocalhost 支持 Helm，Rawmanifest 和 Kustomiz 的 K8S 应用程序的部署。
+当应用工作负载，部署环境注入，生命周期钩等时，它们可以提供诸如依赖订单规范之类的功能。
+此外，它们还支持多种配置方法，例如配置，注释等。
 
-Nocalhost supports the deployment of K8s applications by Helm, RawManifest and Kustomiz. They can provide functions such as dependency order specification when apply the workload, deployment env injection, life cycle hook, etc. Moreover, they also support multiple configuration methods, such as Configmap, Annotation, etc.
+!!! info "在开始本节之前，请确保您已经知道如何配置 Nocalhost。"
 
-!!! info "PRE-REQUIRE"
+    如果没有，请首先阅读 [Nocalhost概述](../config-overview-en.md)。
 
-    在开始本节之前，请确保您已经知道如何配置Nocalhost。如果没有，请首先阅读[Nocalhost概述]config-overview-en.md）。
+## [快速启动 - 基本的部署配置](quickstart.md)
 
-## [快速启动 - 基本的 Nocalhost 部署配置](config-deployment-quickstart.md)
+我们介绍了`Deploy Config`提供的一些功能，因此在本节中，我们将提供一些示例，以更多地说明有关基本 nocalhost`Deploy Config`和安装的更多信息。
 
-We have introduced some functions provided by `Deploy Config`, so in this section, we will give a few examples to explain more about the basic Nocalhost `Deploy Config` and installation.
+## [Nocalhost 部署配置规范](spec.md)
 
-## [Nocalhost 部署配置规范](config-deployment-spec.md)
+知道最基本的 nocalhost`Deploy Config`,我们将在本节中介绍特定的部署配置, 包括依赖订单规范在启动工作量时，部署 env 注入，挂钩等.
 
-After knowing the most basic Nocalhost `Deploy Config`, we will introduce the specific deployment configurations in this section, including dependency order specification when initiating the workload, deployment env injection, hook, etc.
+## [Dep 组件和其他方法](advance.md)
 
-## [Dep 组件和其他方法](config-deployment-advance.md)
+Nocalhost `Deploy Config`支持多种方法，例如 ConfigMap，注释等。
+实际上，这些方法也适用于`Deploy Config`,但是有些功能需要与 K8S Webhook 结合使用, Nocalhost 中的`Nocalhost-Dep`组件发挥了作用.
+`Nocahost Server` 将自动部署此组件, 因此，如果您不使用`Nocalhost Server`, 您需要部署额外的组件`Nocalhost Dep`.
 
-Nocalhost `Dev Config` supports multiple methods, such as ConfigMap, Annotations, etc. In fact, these methods are also applicable in `Deploy Config`, but some functions need to work in conjunction with K8s WebHook, and the `Nocalhost-Dep` component in Nocalhost plays that role. `Nocahost Server` will automatically deploy this component, so if you do not use `Nocalhost Server`, you need to deployment extra component `Nocalhost Dep`.
+## [Config.yaml 句法](syntax.md)
 
-## [Config.yaml 句法](config-deployment-syntax.md)
-
-To improve the reusability and flexibility of Nocalhost configuration and avoid repeated configure, Nocahost provides environment variable injection and yaml include syntax.
+为了提高 Nocalhost 配置的可重复性和灵活性并避免重复配置，Nocahost 提供了环境可变注入，YAML 包括语法。

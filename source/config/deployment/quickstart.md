@@ -86,11 +86,11 @@ The directories are as follows, `.nocalhost` folder is created in the root direc
 
 You can right-click any `namespace` on Nocalhost plug-in, then click `Deploy Application` and select `clone from git`. Enter `https://github.com/nocalhost/bookinfo` to Git URL column and `manifest/config/example` to the branch column.
 
-<img className="gif-img" src={useBaseUrl('/img/config/deploy-config-install-manifest.png')} />
+![](../img/config/deploy-config-install-manifest.png)
 
 Nocalhost will deploy this RawManifest application after you click OK. Now, you can find `bookinfo` under `namespace`.
 
-<img className="gif-img" src={useBaseUrl('/img/config/deploy-config-install-manifest-success.png')} />
+![](../img/config/deploy-config-install-manifest-success.png)
 
 #### 自定义 resourcePath 和 ignoredPath
 
