@@ -1,5 +1,5 @@
 ---
-title: Deploy Config
+title: 部署配置
 ---
 
 我们将在本节中介绍 Nocalhost 部署配置。
@@ -10,7 +10,7 @@ Nocalhost 支持 Helm，Rawmanifest 和 Kustomiz 的 K8S 应用程序的部署�
 
 !!! info "在开始本节之前，请确保您已经知道如何配置 Nocalhost。"
 
-    如果没有，请首先阅读 [Nocalhost概述](../config-overview-en.md)。
+    如果没有，请首先阅读 [Nocalhost概述](../config-overview.md)。
 
 ## [快速启动 - 基本的部署配置](quickstart.md)
 

@@ -1,8 +1,10 @@
 ---
-title: Enhance configuration
+title: 增强配置
 ---
 
-## 自动端口转发在开发模式下
+# 增强配置
+
+## 在开发模式下自动端口转发
 
 ```yaml
 name: nocalhost-api
@@ -15,11 +17,11 @@ containers:
         - 3306:3306
 ```
 
-If you expect some ports of the Dev Container could be automatically port-forward to the local after entering Dev Mode, you can do some related configurations.
+如果您希望进入 Dev Mode 后，Dev Container 的某些端口可以自动端口转发到本地，可以进行相关配置。
 
-!!! danger "About system ports"
+!!! danger "关于系统端口"
 
-    If permission is required to listen on the local ports, such as the system ports (below 1024) in Ubuntu or Windows, automatic port-forward cannot be enabled after entering Dev Mode.
+    如果需要在本地端口(例如Ubuntu或Windows的系统端口(小于1024))上进行监听，则进入Dev Mode后无法启用自动端口转发功能。
 
 ## 源代码地址
 
@@ -32,13 +34,14 @@ containers:
       gitUrl: git@github.com:nocalhost/nocalhost.git
 ```
 
-Source code address refers to the git source code directory of the service. It is used to quickly and easily download the source code and it supports http/https and ssh protocols.
+源代码地址指服务的 git 源代码目录。
+它用于快速和轻松地下载源代码，它支持 http/https 和 ssh 协议。
 
 !!! tip
 
-    Whether the code can be successfully cloned depends on whether the device has the permission.
+    能否成功克隆代码取决于设备是否有权限。
 
-It would be the best to configure the gitUrl for each service in advance. In this way, the communication cost between teams could be greatly reduced.
+最好提前为每个服务配置 gitUrl。这样可以大大降低团队之间的沟通成本。
 
 ## 文件同步
 

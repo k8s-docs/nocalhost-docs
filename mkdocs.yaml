@@ -170,22 +170,22 @@ nav:
       - guides/clear-pvc.md
       - guides/debug/_debug-configuration.md
   - 配置:
-      - 概述: config/config-en.md
-      - 配置是什么？: config/config-overview-en.md
-      - Spec:
-          - 规格: config/config-spec-en.md
-          - 容器配置: config/config-dev-container.md
-          - 增强配置:
-              - 增强: config/config-enhance.md
-              - 模式匹配: config/config-pattern.md
-          - 开发配置: config/config-develop.md
-      - 配置方式: config/configure-en.md
+      - config/README.md
+      - 配置简介: config/config-overview.md
+      - 配置规格:
+          - config/config-spec.md
+          - config/config-dev-container.md
+          - config/config-enhance.md
+          - config/config-pattern.md
+          - config/config-develop.md
+      - 配置方式:
+          - config/configure.md
       - 应用部署:
-          - 部署配置: config/deployment/README.md
-          - 快速启动: config/deployment/quickstart.md
-          - 规格: config/deployment/spec.md
-          - 高级: config/deployment/advance.md
-          - 特殊语法: config/deployment/syntax.md
+          - config/deployment/README.md
+          - config/deployment/quickstart.md
+          - config/deployment/spec.md
+          - config/deployment/advance.md
+          - config/deployment/syntax.md
   - 最佳实践:
       - 云兼容:
           - K8兼容: practice/cloud/k8s-compatible.md

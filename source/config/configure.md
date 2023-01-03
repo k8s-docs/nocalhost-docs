@@ -1,39 +1,41 @@
 ---
-title: Configure
+title: 方式说明
 ---
 
-除了将配置放入 IDE 插件的`DevConfig`（右键单击）之外，Nocalhost 还支持将其放入源代码目录，ConfigMap 或注释中。
-例如，您可以将配置置于注释，掌舵图或 RawManifest 中，以避免通过 IDE 重复配置。
+除了将配置放入 IDE 插件的`DevConfig`（右键单击）之外，Nocalhost 还支持将其放入源代码目录， `ConfigMap` 或注释中。
+例如，您可以将配置置于注释，Helm 图或 RawManifest 中，以避免通过 IDE 重复配置。
 
-!!! info "PRE-REQUIRE"
+!!! info "预先提取"
 
-    请确保您已经知道如何正确配置Nocahost。 如果没有，请先阅读[Nocalhost概述](config-overview-en.md)。
+    请确保您已经知道如何正确配置Nocahost。 如果没有，请先阅读[Nocalhost概述](config-overview.md)。
 
 ## 零配置
 
-Zero-configuration means to enter `DevMode` without any Nocalhost configuration. The only thing needed is to select or type in a development image.
+零配置是指在没有任何 Nocalhost 配置的情况下进入`DevMode`。
+惟一需要做的是选择或键入一个开发映像。
 
-![⭐️   Start DevMode without any configuration   ⭐️ ](../img/config/dev-without-config.gif)
+![⭐️启动devmode没有任何配置⭐️](../img/config/dev-without-config.gif)
 
 ### 零配置的行为期望
 
-!!! info "Why care about the expectation of behavior?"
+!!! info "为什么要关心行为的期望？"
 
-    In zero-configuration, you normally do not need to care about what Nocalhost has done. However, if any of the following behaviors does not meet your expectation, you need to configure Nocalhost to customize it.
+    在零配置中，通常不需要关心Nocalhost做了什么。
+    但如果以下行为不符合您的期望，则需要配置Nocalhost进行自定义。
 
-- Use `/home/nocalhost-dev` in the container as the target directory for file synchronization.
-- Try to enter the development container by using the following commands in order: zsh, bash, sh.
-- Without persistence enabled, the local data generated in the development container will be lost after closing or restarting the container.
-- Unable to use one-click running and debugging
-- Synchronize all contents of the selected directory into the container
+- 使用容器中的`/home/nocalhost-dev`作为文件同步的目标目录。
+- 尝试按顺序使用以下命令进入开发容器:zsh、bash、sh。
+- 如果不启用持久性，在开发容器中生成的本地数据将在关闭或重新启动容器后丢失。
+- 无法使用一键式运行和调试
+- 将所选目录的所有内容同步到容器中
 
 ## 源代码目录中的配置
 
-Nocalhost supports putting the configuration in source code directory, which can be done by experienced developers, so that other team members can share the configuration.
+Nocalhost 支持将配置放入源代码目录中，可以由经验丰富的开发人员完成，以便其他团队成员可以共享配置。
 
 ### 将配置添加到源代码
 
-Check that the configuration works well in the `DevConfig` of a specific workload (right-click). Then copy it as below:
+检查配置是否在特定工作负载的`DevConfig`中正常工作(右键单击)。然后复制如下:
 
 ```yaml
 name: nocalhost-api
@@ -47,11 +49,13 @@ containers:
           value: WHATEVER
 ```
 
-Create `.nocalhost` directory in the corresponding source code directory, and then create a file named `config.yaml`. Paste and save the content in `config.yaml`.
+在相应的源代码目录中创建`.nocalhost`目录，然后创建一个名为`config.yaml`的文件。
+粘贴并保存在`config.yaml`中。
 
 ### 生效
 
-Right-click this workload again and click `DevConfig`. You will find that the configuration has been read from the local directory and there is a "Tips" at the top, indicating that this configuration is a in-memory replica of local file.
+再次右键单击此工作负载并单击`DevConfig`。
+您将发现配置是从本地目录中读取的，顶部有一个`Tips`，表明该配置是本地文件的内存副本。
 
 ```yaml
 # Tips: This configuration is a in-memory replica of local file:
@@ -72,11 +76,11 @@ Right-click this workload again and click `DevConfig`. You will find that the co
 
 !!! question "当您忘记哪个本地目录与工作负载相关联"
 
-    Right-click this workload and click `Open Project` to open the associated directory or click `Associate Local DIR` to associate a new directory.
+    右键单击该工作负载并单击“Open Project”以打开相关目录或单击“Associate Local DIR”以关联一个新目录。
 
-!!! question "Multiple workloads in one source code"
+!!! question "一个源代码中的多个工作负载"
 
-    You can configure multiple workloads in one source code. To do this, add a layer to make the configuration items an array, as shown below:
+    您可以在一个源代码中配置多个工作负载。为此，添加一个层，使配置项成为一个数组，如下所示:
 
     ```yaml
     - name: nocalhost-api
@@ -99,11 +103,13 @@ Right-click this workload again and click `DevConfig`. You will find that the co
 
 ## ConfigMap 中的配置
 
-Nocalhost supports putting the configuration in Configmap, which helps to customize the association with the environment. For example, you can write some customized configurations in Configmap and apply it througth the deployment script or CD.
+Nocalhost 支持将配置放在 Configmap 中，这有助于自定义与环境的关联。
+例如，您可以在 Configmap 中编写一些定制配置，并通过部署脚本或 CD 应用它。
 
 ### 将配置添加到 ConfigMap 中
 
-Here we display a very general Helm template of Nocalhost configuration. Note that you do not have to use Helm, and this is just an example for better explanation here.
+这里我们展示了一个非常通用的 Nocalhost 配置 Helm 模板。
+请注意，你不一定要使用 Helm，这只是一个例子，以便更好地解释。
 
 ```yaml
 apiVersion: v1
@@ -119,15 +125,17 @@ data:
     {{ .Files.Get .Values.nocalhost.config.path | nindent 4 }}
 ```
 
-!!! tip "What is `{{ .Release.Name }}`"
+!!! tip "什么是 `{{ .Release.Name }}`"
 
-    You can find that there are two parts in configmap that are introduced as placeholders. The first is `{{ .Release.Name }}` in the fourth line, which is the name of application. If you are using Helm or Nocalhost to install the application, you need to write the corresponding application name in it, otherwise it should be `default.application` all the time.
+    您可以发现configmap中有两个部分是作为占位符引入的。
+    第一个是第四行中的`{{ .Release.Name }}`，这是应用程序的名称。
+    如果您使用Helm或Nocalhost安装应用程序，您需要在其中写入相应的应用程序名称，否则它应该一直是`default.application`。
 
-!!! tip "What is `{{ .Files.Get .Values.nocalhost.config.path | nindent 4 }}`"
+!!! tip "什么是 `{{ .Files.Get .Values.nocalhost.config.path | nindent 4 }}`"
 
-    This is indeed the position where Nocalhost config should be written in, with four indents.
+    这确实是应该写入Nocalhost配置的位置，有四个缩进。
 
-After knowing the above placeholders, we give the real configmap, as shown in the following format:
+在知道了上面的占位符之后，我们给出了真正的 configmap，如下所示:
 
 ```yaml
 apiVersion: v1
@@ -277,4 +285,4 @@ Before using Nocalhost configuration, Nocalhost will check all configuration met
 
 ### DevConfig 特征
 
-Please read [Nocalhost DevConfig Features](config-overview-en.md#四、开发配置的特性)
+Please read [Nocalhost DevConfig Features](config-overview.md#四、开发配置的特性)

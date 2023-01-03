@@ -1,8 +1,10 @@
 ---
-title: Spec
+title: 配置规格
 ---
 
-!!! info "在开始本节之前，请确保您已经知道如何配置 Nocalhost。 如果没有，请先阅读[配置概述](config-overview-en.md)。"
+# 配置规格
+
+!!! info "在开始本节之前，请确保您已经知道如何配置 Nocalhost。 如果没有，请先阅读[配置概述](config-overview.md)。"
 
 Nocalhost 的配置可以分为三个部分。
 

@@ -1,5 +1,5 @@
 ---
-title: Quick Start
+title: 快速入门
 ---
 
 您可以配置适当的部署方法，通过 Nocalhost IDE 插件部署 K8s 应用程序。Nocalhost 支持以下类型部署应用:
@@ -10,7 +10,7 @@ title: Quick Start
 
 ## 部署配置结构
 
-[Dev Config](../config-overview-en.md) is a part of Deploy Config. The simplest structure of Deploy Config is as follows:
+[Dev Config](../config-overview.md) is a part of Deploy Config. The simplest structure of Deploy Config is as follows:
 
 ```yaml
 application:
@@ -210,7 +210,7 @@ Dev Config can be embedded in Deploy Config. That brings a benefit that Nocalhos
 
 The bookinfo application we used above has several workloads which are deployment type. Now, let us configure them as follows.
 
-Apart from the above minimized configurations, we introduce an array named services, in which the elements are **[Dev Config](../config-spec-en.md)** .
+Apart from the above minimized configurations, we introduce an array named services, in which the elements are **[Dev Config](../config-spec.md)** .
 
 ```yaml
 application:

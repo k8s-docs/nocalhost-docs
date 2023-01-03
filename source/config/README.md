@@ -1,19 +1,19 @@
 # 概述
 
-## [配置概述](config-overview-en.md)
+## [配置概述](config-overview.md)
 
 它是什么，如何配置以及它具有什么功能？
 
 本节介绍了一些信息，例如 Nocalhost 配置是什么，如何修改配置以及具有什么功能。
 **如果您没有 Nocalhost 配置的概念** 或想了解 Nocalhost 配置的结构和功能，则可以读取本节。
 
-## [提供什么配置？](config-spec-en.md)
+## [提供什么配置？](config-spec.md)
 
 开发配置定义了输入`DevMode`的行为。
 如果 **您想在输入`DevMode`时进行一些自定义配置**，则开发配置将很有帮助。
 如果您想知道 Nocalhost 提供的配置，则可以阅读本节。
 
-## [支持哪种配置方式？](configure-en.md)
+## [支持哪种配置方式？](config-spec.md)
 
 Nocalhost 支持多种配置 Devmode 的方法，并为各种丰富的用法方案提供支持。
 最常见的配置方法是右键单击 IDE 插件中的特定工作负载，然后选择`DevConfig`以输入开发配置编辑 UI。

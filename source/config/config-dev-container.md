@@ -1,8 +1,6 @@
 ---
-title: Dev Container configuration
+title: 开发容器配置
 ---
-
-# 容器配置
 
 ## 文件同步的远程目录
 

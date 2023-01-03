@@ -1,5 +1,5 @@
 ---
-title: Syntax
+title: 部署语法
 ---
 
 ## Injecting environment variables in config.yaml

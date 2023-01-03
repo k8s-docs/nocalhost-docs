@@ -2,437 +2,437 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://nocalhost.dev/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/installation/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/quick-start/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/changelogs/0.4.x/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/changelogs/0.5.x/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/changelogs/0.6.x/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-apply/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-config/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-convert/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-daemon/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-db/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-describe/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-dev/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-exec/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-get/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-init/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-install/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-k/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-list/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-port-forward/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-profile/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-pvc/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-render/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-reset/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-sync-status/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-sync/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-uninstall/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-upgrade/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-version/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/cli/cli-yaml/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nocalhost.dev/config/config-dev-container-en/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <loc>https://nocalhost.dev/config/</loc>
+         <lastmod>2023-01-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nocalhost.dev/config/config-dev-container/</loc>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/config/config-develop/</loc>
-         <lastmod>2022-12-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nocalhost.dev/config/config-en/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/config/config-enhance/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nocalhost.dev/config/config-overview-en/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <loc>https://nocalhost.dev/config/config-overview/</loc>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/config/config-pattern/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nocalhost.dev/config/config-spec-en/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <loc>https://nocalhost.dev/config/config-spec/</loc>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nocalhost.dev/config/configure-en/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <loc>https://nocalhost.dev/config/configure/</loc>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/config/deployment/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/config/deployment/advance/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/config/deployment/quickstart/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/config/deployment/spec/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/config/deployment/syntax/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/faq/faq/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/guides/clear-pvc/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/guides/hot-reload/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/guides/manage-cluster/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/guides/remote-run/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/guides/debug/_debug-configuration/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/guides/debug/access-terminal/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/guides/debug/jetbrains-debug/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/guides/debug/log-viewer/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/guides/debug/overview/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/guides/debug/vscode-debug/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/guides/deploy/deploy-app/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/guides/deploy/deploy-demo/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/guides/deploy/deploy-from-helm/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/guides/develop/service-crd-en/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/guides/develop/service-crd/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/guides/develop/service-dup-en/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/guides/develop/service-dup-mesh/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/guides/develop/service-dup/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/guides/develop/service-replace-en/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/guides/develop/service-replace/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/guides/develop/service-vpn/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/guides/develop/service/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/practice/kubesphere/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/practice/cloud/ali-ack/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/practice/cloud/amazon-eks/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/practice/cloud/google-gke/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/practice/cloud/k8s-compatible/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/practice/cloud/ms-azure/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/practice/cloud/rancher-rke/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/practice/cloud/tencent-tke/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/practice/pre-release/kubesphere/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/reference/nh-config/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/server/deploy-in-kubesphere-en/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/server/deploy-in-kubesphere/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/server/deploy-server/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/server/manage-app/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/server/manage-cluster/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/server/manage-devspace-iso/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/server/manage-devspace-mesh/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/server/manage-user/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/server/nh-dep/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/server/server-overview/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nocalhost.dev/server/upgrade/</loc>
-         <lastmod>2022-12-28</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

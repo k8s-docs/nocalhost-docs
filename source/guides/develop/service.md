@@ -207,7 +207,7 @@ Nocalhost 将使用[`dev.image`](../../config/config-dev-container.md#DevImage)�
 
 进入 DevMode 时，Nocalhost 将做以下事情：
 
-1. **替换 Pods** 根据你的[`replacing port` 配置](../../config/config-spec-en.md)
+1. **替换 Pods** 根据你的[`replacing port` 配置](../../config/config-spec.md)
 2. **转发端口** 根据你的[`port-forwarding` 配置](../../config/config-enhance.md#开发模式后自动端口转发)
 3. **同步文件更改** 根据[`dev.sync`](../../config/config-enhance.md#文件同步)部分的本地项目目录和 Kubernetes Pod 在本节之间
 4. **打开终端** 在容器启动后，就在 IDE 内。打开的工作目录是根据您的[`dev.workdir`](../../config/config-dev-container.md#)(The Remote Directory for File Synchronization)部分的。

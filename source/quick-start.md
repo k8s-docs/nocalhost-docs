@@ -1,19 +1,23 @@
-# Quick Start
+# 快速开始
 
 !!! note "关于本指南"
 
-    - **Goal:** 安装Nocalhost，评估核心功能并体验有效的云本地应用程序开发。
+    - **目标:** 安装Nocalhost，评估核心功能并体验有效的云本地应用程序开发。
     - **估计时间:** 5分钟
     - **要求:**
 
-        - Any local or remote Kubernetes cluster (minikube, Docker Desktop, TKE, GKE, EKS, AKS, Rancher, ...). Allocate at least 4 GB of memory for single-node clusters like [Docker Desktop](https://docs.docker.com/docker-for-mac/kubernetes/) and [minikube](https://minikube.sigs.k8s.io/docs/start/).
-        - **RBAC** must be enabled in the above cluster
-        - **Socat** should installed in the nodes for cluster (Nocalhost file synchronization depends on port-forward)
-        - **Configured KubeConfig file** that has namespace admin privilege
-        - Kubernetes api-server can be accessed internal and external
+        - 任何本地或远程Kubernetes集群(minikube, Docker Desktop, TKE, GKE, EKS, AKS, Rancher…).
+          为[Docker Desktop]和[minikube]等单节点集群分配至少4gb内存。
+        - **RBAC** 必须在上述集群中启用
+        - **Socat** 需要安装在集群的节点上(Nocalhost文件同步依赖于端口转发)
+        - **配置的kubecconfig文件** 具有名称空间管理权限
+        - Kubernetes api-server支持内部和外部访问
         - Visual Studio Code (1.52+)
 
-## 1. 安装 Nocalhost VS 代码扩展
+[docker desktop]: (https://docs.docker.com/docker-for-mac/kubernetes/)
+[minikube]: (https://minikube.sigs.k8s.io/docs/start/)
+
+## 1. 安装 Nocalhost VS Code 扩展
 
 1.  打开 VS 代码，然后单击图标<img src='../img/icons/vs-code-icon.jpg' width="20" />进入扩展
 2.  在搜索框中输入`nocalhost`

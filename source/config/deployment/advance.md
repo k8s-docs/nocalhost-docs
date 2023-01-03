@@ -1,5 +1,5 @@
 ---
-title: Advance
+title: 高级配置
 ---
 
 Nocalhost 的开发配置支持多种开发方式，例如 ConfigMap，注释等。
@@ -16,7 +16,7 @@ if you do not use `Nocalhost Server`, then additional deployment of `Nocalhost D
 
 ## 使用 ConfigMap 进行部署配置
 
-To make a simple deployment configuration is mentioned in [Introduction to Deployment Configuration Nocalhost Basic Deployment Configuration](./quickstart.md). Combining with [What configuration methods are supported by Nocalhost-place the configuration in configmap](../configure-en.md#configuration-in-configmap), we can get the configuration:
+To make a simple deployment configuration is mentioned in [Introduction to Deployment Configuration Nocalhost Basic Deployment Configuration](./quickstart.md). Combining with [What configuration methods are supported by Nocalhost-place the configuration in configmap](../configure.md#configuration-in-configmap), we can get the configuration:
 
 We have prepared an demo for this, which will automatically deploy `Nocalhost Dep`, and use the way of ConfigMap to make the deployment configuration.
 
@@ -123,7 +123,7 @@ application:
 
 ## 使用注释进行部署配置
 
-The method of usage is exactly the same as [Which configuration methods Nocalhost supports-place the configuration in annotations](../configure-en.md#configuration-in-annotations).
+The method of usage is exactly the same as [Which configuration methods Nocalhost supports-place the configuration in annotations](../configure.md#configuration-in-annotations).
 
 !!! danger "Extra attention"
 

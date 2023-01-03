@@ -1,5 +1,5 @@
 ---
-title: Spec
+title: 部署规格
 ---
 
 !!! danger "一些配置需要其他组件"
