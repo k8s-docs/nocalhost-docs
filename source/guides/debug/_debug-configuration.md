@@ -1,221 +1,194 @@
-## Configuration
+---
+title: 调试配置
+---
 
-The development environment is different between developers. You should configure remote debug configurations according to the actual situation.
+## 配置
 
-### Sample Configuration
+开发人员之间的开发环境是不同的。请根据实际情况配置远程调试配置。
 
-<Tabs
-defaultValue="java"
-values={[
-{label: 'Java', value: 'java'},
-{label: 'Python', value: 'python'},
-{label: 'Go', value: 'go'},
-{label: 'PHP', value: 'php'},
-{label: 'Node.js', value: 'node'},
-{label: 'Ruby', value: 'ruby'},
-]}>
-<TabItem value="java">
+### 示例配置
 
-```yaml {8,11} title="Nocalhost Configs"
-name: java-remote-debugging
-serviceType: deployment
-containers:
-  - name: ""
-    dev:
-        ...
-        command:
-          debug:
-            - ./debug.sh
-        debug:
-          remoteDebugPort: 5005
-        ...
-```
+=== "java"
 
-#### Maven Example
+    ```yaml title="Nocalhost Configs" hl_lines="8 11"
+    name: java-remote-debugging
+    serviceType: deployment
+    containers:
+      - name: ""
+        dev:
+            ...
+            command:
+              debug:
+                - ./debug.sh
+            debug:
+              remoteDebugPort: 5005
+            ...
+    ```
 
-The shell command for **Maven** !!! example
+    #### Maven 示例
 
-```bash title="jdk >= 1.8 and springBoot >=2.2.1.RELEASE"
- mvn spring-boot:run -Dspring-boot.run.jvmArguments="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005"
-```
+    The shell command for **Maven** !!! example
 
-For jdk <=1.7 you should replace `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005` with `-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005`
+    ```bash title="jdk >= 1.8 and springBoot >=2.2.1.RELEASE"
+    mvn spring-boot:run -Dspring-boot.run.jvmArguments="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005"
+    ```
 
-For lower version of the springBoot you should replace `-Drun.jvmArguments` with `-Dspring-boot.run.jvmArguments`
+    For jdk <=1.7 you should replace `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005` with `-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005`
 
-#### Gradle Example
+    For lower version of the springBoot you should replace `-Drun.jvmArguments` with `-Dspring-boot.run.jvmArguments`
 
-The startup command for **Gradle** !!! example
+    #### Gradle 例子
 
-```bash title="Gradle's debug.sh"
-./gradlew bootRun --debug-jvm --no-daemon
-```
+    The startup command for **Gradle** !!! example
 
-</TabItem>
-<TabItem value="python">
+    ```bash title="Gradle's debug.sh"
+    ./gradlew bootRun --debug-jvm --no-daemon
+    ```
 
-```yaml {8,11} title="Nocalhost Configs"
-name: python-remote-debugging
-serviceType: deployment
-containers:
-  - name: ""
-    dev:
-        ...
-        command:
-          debug:
-            - ./debug.sh
-        debug:
-          remoteDebugPort: 9009
-        ...
-```
+=== "python"
 
-<Tabs
-defaultValue={props.name}
-values={[
-{label: 'VSCode', value: 'vscode'},
-{label: 'Jetbrains', value: 'jetbrains'},
-]}>
-<TabItem value="jetbrains">
+    ```yaml title="Nocalhost Configs" hl_lines="8 11"
+    name: python-remote-debugging
+    serviceType: deployment
+    containers:
+      - name: ""
+        dev:
+            ...
+            command:
+              debug:
+                - ./debug.sh
+            debug:
+              remoteDebugPort: 9009
+            ...
+    ```
 
-```yaml title="debug.sh"
-#! /bin/sh
+    === "jetbrains"
 
-pip3 install --no-cache-dir -r ./requirements.txt
+        ```yaml title="debug.sh"
+        #! /bin/sh
 
-export DEBUG_DEV=0
-export FLASK_DEBUG=0
-export FLASK_ENV=development
+        pip3 install --no-cache-dir -r ./requirements.txt
 
-flask run --host=0.0.0.0 --port=9999
-```
+        export DEBUG_DEV=0
+        export FLASK_DEBUG=0
+        export FLASK_ENV=development
 
-</TabItem>
-<TabItem value="vscode">
+        flask run --host=0.0.0.0 --port=9999
+        ```
 
-```yaml title="debug.sh"
-#! /bin/sh
+    === "vscode"
 
-pip3 install --no-cache-dir -r ./requirements.txt
+        ```yaml title="debug.sh"
+        #! /bin/sh
 
-python -m debugpy --listen 9009 --wait-for-client productpage.py 9080
-```
+        pip3 install --no-cache-dir -r ./requirements.txt
 
-</TabItem>
-</Tabs>
+        python -m debugpy --listen 9009 --wait-for-client productpage.py 9080
+        ```
 
-**How does it Works?**
 
-Nocalhost using pydevd to debug Python application.
+        **How does it Works?**
 
-![Principle of Remote Python Debugging](../../img/debug/python-debug.jpg)
+        Nocalhost using pydevd to debug Python application.
 
-</TabItem>
-  
-<TabItem value="go">
+        ![Principle of Remote Python Debugging](../../img/debug/python-debug.jpg)
 
-```yaml {8,11} title="Nocalhost Configs"
-name: go-remote-debugging
-serviceType: deployment
-containers:
-  - name: ""
-    dev:
-        ...
-        command:
-          debug:
-            - ./debug.sh
-        debug:
-          remoteDebugPort: 9009
-        ...
-```
+=== "go"
 
-```yaml title="debug.sh"
-#! /bin/sh
+    ```yaml title="Nocalhost Configs"  hl_lines="8 11"
+    name: go-remote-debugging
+    serviceType: deployment
+    containers:
+      - name: ""
+        dev:
+            ...
+            command:
+              debug:
+                - ./debug.sh
+            debug:
+              remoteDebugPort: 9009
+            ...
+    ```
 
-export GOPROXY=https://goproxy.cn
-dlv --headless --log --listen :9009 --api-version 2 --accept-multiclient debug app.go
-```
+    ```yaml title="debug.sh"
+    #! /bin/sh
 
-</TabItem>
-  
-<TabItem value="php">
+    export GOPROXY=https://goproxy.cn
+    dlv --headless --log --listen :9009 --api-version 2 --accept-multiclient debug app.go
+    ```
 
-```yaml {8,11} title="Nocalhost Configs"
-name: php-remote-debugging
-serviceType: deployment
-containers:
-  - name: ""
-    dev:
-        ...
-        command:
-          debug:
-            - ./debug.sh
-        debug:
-          remoteDebugPort: 9003
-        ...
-```
+=== "php"
 
-```yaml title="debug.sh"
-#！/bin/sh
+    ```yaml title="Nocalhost Configs"  hl_lines="8 11"
+    name: php-remote-debugging
+    serviceType: deployment
+    containers:
+      - name: ""
+        dev:
+            ...
+            command:
+              debug:
+                - ./debug.sh
+            debug:
+              remoteDebugPort: 9003
+            ...
+    ```
 
-php -t ./ -S 0.0.0.0:9999;
-```
+    ```yaml title="debug.sh"
+    #！/bin/sh
 
-**How does it works?**
+    php -t ./ -S 0.0.0.0:9999;
+    ```
 
-Nocalhost using Xdebug to debug PHP applications.
+    **How does it works?**
 
-![Principle of Remote PHP Debugging](../../img/debug/php-debug.jpg)
+    Nocalhost using Xdebug to debug PHP applications.
 
-</TabItem>
+    ![Principle of Remote PHP Debugging](../../img/debug/php-debug.jpg)
 
-<TabItem value="node">
+=== "node"
 
-```yaml {8,11} title="Nocalhost Configs"
-name: nodejs-remote-debugging
-serviceType: deployment
-containers:
-  - name: ""
-    dev:
-        ...
-        command:
-          debug:
-            - ./debug.sh
-        debug:
-          remoteDebugPort: 9229
-        ...
-```
+    ```yaml title="Nocalhost Configs"  hl_lines="8 11"
+    name: nodejs-remote-debugging
+    serviceType: deployment
+    containers:
+      - name: ""
+        dev:
+            ...
+            command:
+              debug:
+                - ./debug.sh
+            debug:
+              remoteDebugPort: 9229
+            ...
+    ```
 
-```yaml title="debug.sh"
-#！/bin/sh
+    ```yaml title="debug.sh"
+    #！/bin/sh
 
-npm install
-node --inspect=0.0.0.0:9229 ./index.js
-```
+    npm install
+    node --inspect=0.0.0.0:9229 ./index.js
+    ```
 
-</TabItem>
+=== "ruby"
 
-<TabItem value="ruby">
+    ```yaml title="Nocalhost Configs"  hl_lines="8 11"
+    name: nodejs-remote-debugging
+    serviceType: deployment
+    containers:
+      - name: ""
+        dev:
+            ...
+            command:
+              debug:
+                - ./debug.sh
+            debug:
+              remoteDebugPort: 9001
+            ...
+    ```
 
-```yaml {8,11} title="Nocalhost Configs"
-name: nodejs-remote-debugging
-serviceType: deployment
-containers:
-  - name: ""
-    dev:
-        ...
-        command:
-          debug:
-            - ./debug.sh
-        debug:
-          remoteDebugPort: 9001
-        ...
-```
+    ```yaml title="debug.sh"
+    #！/bin/sh
 
-```yaml title="debug.sh"
-#！/bin/sh
-
-rdebug-ide -h 0.0.0.0 -p 9001 -- details.rb 9080
-```
-
-</TabItem>
-</Tabs>
+    rdebug-ide -h 0.0.0.0 -p 9001 -- details.rb 9080
+    ```

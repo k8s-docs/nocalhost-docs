@@ -17,6 +17,7 @@ copyright: Copyright &copy; 2021-2022 Nocalhost
 # Configuration
 theme:
   name: material
+  logo: img/logo.png
   language: zh
   # custom_dir: material/.overrides
   features:
@@ -55,7 +56,7 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/favicon.png
+  favicon: img/favicon.ico
   icon:
     logo: logo
 
@@ -137,38 +138,35 @@ markdown_extensions:
 # Page tree
 nav:
   - 主页:
-      - 介绍: README.md
-      - 快速入门: quick-start.md
+      - README.md
+      - quick-start.md
       - 安装: installation.md
       - 配置参考: reference/nh-config.md
       - 常见问题: faq/faq.md
   - 用户指南:
-      - 集群管理: guides/manage-cluster.md
+      - guides/manage-cluster.md
       - 应用部署:
-          - 使用 Nocalhost 进行应用部署: guides/deploy/deploy-app.md
-          - 部署示例应用: guides/deploy/deploy-demo.md
-          - helm: guides/deploy/deploy-from-helm.md
+          - guides/deploy/README.md
+          - guides/deploy/deploy-demo.md
+          - guides/deploy/deploy-from-helm.md
       - 开发:
-          - develop-service: guides/develop/service.md
-          - guides/develop/service-crd-en.md
-          - DevMode(Replace): guides/develop/service-replace.md
-          - guides/develop/service-replace-en.md
-          - DevMode(Duplicate): guides/develop/service-dup.md
-          - guides/develop/service-dup-en.md
-          - CustomResources: guides/develop/service-crd.md
-          - VPN proxy: guides/develop/service-vpn.md
-          - DevMode Mesh: guides/develop/service-dup-mesh.md
+          - guides/develop/README.md
+          - guides/develop/service-replace.md
+          - guides/develop/service-dup.md
+          - guides/develop/service-crd.md
+          - guides/develop/service-vpn.md
+          - guides/develop/service-dup-mesh.md
       - 调试:
-          - 概览: guides/debug/overview.md
+          - guides/debug/README.md
           - 远程调试:
-              - Jetbrains 远程调试: guides/debug/jetbrains-debug.md
-              - VSCode 远程调试: guides/debug/vscode-debug.md
-          - 访问容器的终端: guides/debug/access-terminal.md
-          - 查看日志: guides/debug/log-viewer.md
-      - 远程运行: guides/remote-run.md
-      - 热加载: guides/hot-reload.md
+              - guides/debug/jetbrains-debug.md
+              - guides/debug/vscode-debug.md
+          - guides/debug/access-terminal.md
+          - guides/debug/log-viewer.md
+          - guides/debug/_debug-configuration.md
+      - guides/remote-run.md
+      - guides/hot-reload.md
       - guides/clear-pvc.md
-      - guides/debug/_debug-configuration.md
   - 配置:
       - config/README.md
       - 配置简介: config/config-overview.md
@@ -240,3 +238,12 @@ nav:
       - 0.6.x: changelogs/0.6.x.md
       - 0.5.x: changelogs/0.5.x.md
       - 0.4.x: changelogs/0.4.x.md
+  - 博客:
+      - blog/0.5.6.md
+      - blog/2021-01-01.md
+      - blog/2021-07-05-jimmy.md
+      - blog/api-six.md
+      - blog/docs-translate.md
+      - blog/gm-cd.md
+      - blog/rainbond-debug.md
+      - blog/rainbond-dev.md

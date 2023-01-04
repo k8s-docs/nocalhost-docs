@@ -1,8 +1,6 @@
 ---
-title: Jetbrains
+title: Jetbrains 远程调试
 ---
-
-# Jetbrains Remote Debugging
 
 ## Supported IDEs
 

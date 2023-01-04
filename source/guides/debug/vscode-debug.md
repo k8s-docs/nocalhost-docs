@@ -1,8 +1,6 @@
 ---
-title: VSCode
+title: VSCode 远程调试
 ---
-
-# VSCODE 远程调试
 
 ## 支持的语言
 

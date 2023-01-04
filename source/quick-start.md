@@ -1,4 +1,6 @@
-# 快速开始
+---
+title: 快速开始
+---
 
 !!! note "关于本指南"
 
@@ -81,7 +83,7 @@
 
 !!! warning "关于前提"
 
-    如果您正在遇到DevMode在“前提K8S群集”中，则需要[配置SideCar映像地址](./config/config-dev-container#sidecar-image-customization)并将镜像推到您自己的存储库中。
+    如果您在K8s集群中使用DevMode，则需要另外[配置sidecar映像地址](./config/config-dev-container#sidecar-image-customization)，并将映像推到您自己的存储库中。
 
 ## 4. 更改代码并查看结果
 
@@ -101,7 +103,7 @@
 
     ![在远程终端中执行主过程](./img/opt/main-process.gif)
 
-    !!! note "Port-Forwarding"
+    !!! note "转发端口"
 
         在我们的“Bookinfo”演示中demo, 我们已经将Port-Forward设置为39080:9080, 这意味着Nocalhost将自动将数据从本地端口 **39080** 转发到端口 **9080**.
 
@@ -118,6 +120,6 @@
 
 - 请参阅 Nocalhost 的[简介](./introduction)
 - 访问我们的[github repo](https://github.com/nocalhost/nocalhost)
-- 加入我们的[Slack](https://nocalhost.slack.com/)或扫描代码以加入我们的微信组
+- 加入我们的[Slack](https://nocalhost.slack.com/)或扫描代码以加入我们的微信群
 
-![]('./img/nocal-host-wechat.png')
+![微信群](./img/nocal-host-wechat.png){ width="200" }

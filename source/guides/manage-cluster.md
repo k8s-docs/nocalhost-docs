@@ -1,6 +1,8 @@
-# Manage Cluster
+---
+title: 集群管理
+---
 
-## 连接到 Kubernetes 群集
+## 连接到 K8S 群集
 
 Nocalhost 支持多集群管理，您可以使用两种方法连接到 Kubernetes 群集：
 
@@ -8,17 +10,17 @@ Nocalhost 支持多集群管理，您可以使用两种方法连接到 Kubernete
 
 从任何本地目录中选择`KubeConfig`文件。
 
-!!! tip "Default KubeConfig"
+!!! tip "默认 KubeConfig"
 
-    Nocalhost will try to load `KubeConfig` from your local `~/.kube/config` by default.
+    默认情况下，Nocalhost将尝试从本地的`~/.kube/config`加载`kubecconfig`。
 
 **将 kubeconfig 粘贴为文本**
 
-Paste the `KubeConfig` as a text.
+将`KubeConfig`作为文本粘贴。
 
-!!! tip "Get KubeConfig"
+!!! tip "获取 Kubeconfig"
 
-    You can use the following command to view your `KubeConfig`, copy and paste to the Nocalhost plugin.
+    您可以使用以下命令查看您的`KubeConfig`，复制并粘贴到Nocalhost插件。
 
     ```bash
     kubectl config view --minify --raw --flatten
@@ -32,11 +34,11 @@ Paste the `KubeConfig` as a text.
 
     ![Connect to cluster in JetBrains IDE](../img/opt/idea-connect-cluster.gif)
 
-## Remove Cluster
+## 删除群集
 
 !!! note "KubeConfig Unchanged"
 
-    Nocalhost will only remove the cluster from inspector, it will not modify your `KubeConfig`.
+    Nocalhost只会从检查器中移除集群，它不会修改你的`kubecconfig`。
 
 === "vscode"
 
@@ -46,9 +48,9 @@ Paste the `KubeConfig` as a text.
 
     ![Remove cluster in JetBrains IDE](../img/opt/idea-remove-cluster.gif)
 
-## View KubeConfig
+## 查看 KubeConfig
 
-Right-click the specified cluster and select `View KubeConfig`, the Nocalhost plugin will open the `KubeConfig` of the cluster.
+右键单击指定的集群并选择`View KubeConfig`，Nocalhost 插件将打开集群的`kubecconfig`。
 
 === "vscode"
 

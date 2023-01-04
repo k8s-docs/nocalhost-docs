@@ -170,13 +170,14 @@ data:
 
 !!! danger "Notes"
 
-    1. Naming rules: It must follow the format `dev.nocalhost.config.${appName}`, namely `name: "dev.nocalhost.config.{{ .Release.Name }}"`.
-    2. Labels: It needs a key-value label, which is fixed as `dep-management: nocalhost`.
-    3. config is in `data.config` as a text block and please pay attention to the indent of the configuration.
+    1. Naming rules: 它必须遵循格式 `dev.nocalhost.config.${appName}`, 即 `name: "dev.nocalhost.config.{{ .Release.Name }}"`.
+    2. Labels: 它需要一个键值标签, 固定为 `dep-management: nocalhost`.
+    3. Config在`data.config`中是一个文本块，请注意配置的缩进。
 
 ### 生效
 
-After configuring Configmap, right-click this workload again and click `DevConfig`. If you get the following tips as below, indicating that this configuration is a in-memory replica of local file, that means the configuration has taken effect.
+配置 Configmap 后，再次右键单击该工作负载并单击`DevConfig`。
+如果您得到如下提示，表明此配置是本地文件的内存副本，则意味着配置已经生效。
 
 ```yaml
 # Tips: This configuration is a in-memory replica of configmap:
@@ -190,11 +191,11 @@ After configuring Configmap, right-click this workload again and click `DevConfi
 
 ## 注释中的配置
 
-Nocalhost also supports putting the configuration in annotations, which is for the same consideration as configmap.
+Nocalhost 还支持将配置放在注释中，这与 configmap 出于同样的考虑。
 
 ### 在注释中添加配置
 
-In like manner, we use a Helm template for explanation, which will help to understand which values should be customized and the corresponding format requirements.
+同样，我们使用 Helm 模板进行解释，这将有助于理解应该定制哪些值以及相应的格式要求。
 
 ```yaml
 apiVersion: apps/v1
@@ -206,7 +207,9 @@ metadata:
       {{ .Files.Get .Values.nocalhost.annotations.path.authors | nindent 6 }}
 ```
 
-Annotations configuration is very simple. Here you only need to declare an annotation, fix the key to `dev.nocalhost` and fix the value as a text block with six fixed indents. As shown below:
+注释的配置非常简单。
+在这里，您只需要声明一个注释，将键固定为`dev.nocalhost`，并将值固定为带有六个固定缩进的文本块。
+如下图所示:
 
 ```yaml
 apiVersion: apps/v1
@@ -226,9 +229,9 @@ metadata:
                 value: WHATEVER
 ```
 
-Since one workload will not have multiple configurations, there is no need to declare it as array (although array is also supported).
+因为一个工作负载不会有多个配置，所以不需要将其声明为数组(尽管也支持数组)。
 
-Moreover, the configuration has been fixedly bound to the workload (whether it is Deployment, StatefulSet, DaemonSet or others), so there is also no need to declare its name and type. As shown below:
+此外，配置已经固定绑定到工作负载(无论是 Deployment、StatefulSet、DaemonSet 还是其他工作负载)，因此也不需要声明其名称和类型。如下图所示:
 
 ```yaml
 apiVersion: apps/v1
@@ -250,12 +253,12 @@ kind: Deployment
 
 !!! danger "Notes"
 
-    1. The key must be `dev.nocalhost`, and the value must be a text block of `Nocalhost Config`.
-    2. Pay attention to the indent.
+    1. 键必须是`dev.nocalhost`，值必须是`Nocalhost Config`的文本块。
+    2. 注意缩进。
 
 ### 生效
 
-After configuring the Annotation, right-click this workload again and click `DevConfig`. The following tips means the configuration has taken effect.
+在配置 Annotation 之后，再次右键单击这个工作负载并单击`DevConfig`。说明如下提示表示配置生效。
 
 ```yaml
 # Tips: This configuration is a in-memory replica of annotation:
@@ -273,16 +276,16 @@ After configuring the Annotation, right-click this workload again and click `Dev
 
 ### 配置的粒度和优先级
 
-Nocalhost supports hybrid configurations, for example, if there are ten workloads, three of them can be local, three are Configmap, three are Annotations, and the last one is zero-configuration.
+Nocalhost 支持混合配置，例如，如果有十个工作负载，其中三个是本地的，三个是 Configmap 的，三个是 annotation 的，最后一个是零配置的。
 
-!!! info "If a workload is configured with multiple ways, the priority is as follows:"
+!!! info "如果一个工作负载配置了多种方式，则优先级如下:"
 
     Local > Annotations > Configmap > in DevConfig
 
 ### 配置读取时间
 
-Before using Nocalhost configuration, Nocalhost will check all configuration methods and try to read them. Therefore, the read of the configuration can be considered to be real-time.
+在使用 Nocalhost 配置之前，Nocalhost 将检查所有配置方法并尝试读取它们。因此，配置的读取可以认为是实时的。
 
 ### DevConfig 特征
 
-Please read [Nocalhost DevConfig Features](config-overview.md#四、开发配置的特性)
+请阅读[Nocalhost DevConfig 特性](config-overview.md#四、开发配置的特性)

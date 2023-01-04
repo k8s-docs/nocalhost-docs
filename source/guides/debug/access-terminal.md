@@ -1,8 +1,6 @@
 ---
-title: Access Terminal
+title: 访问容器的终端
 ---
-
-# 访问容器的终端
 
 Nocalhost 提供了两种模式来访问目标容器的端子。
 

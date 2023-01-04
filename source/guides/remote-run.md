@@ -1,6 +1,8 @@
-# 远程运行
+---
+title: 远程运行
+---
 
-当您在 Kubernetes 群集中启动新容器时，Kubernetes 将不会在此容器中启动任何进程。Nocalhost 可以使用运行配置在 Kubernetes 群集中运行代码，喜欢在 IDE 内使用运行功能。
+当您在 Kubernetes 群集中启动新容器时，Kubernetes 将不会在此容器中启动任何进程。Nocalhost 可以使用运行配置在 Kubernetes 群集中运行代码，类似在 IDE 内使用运行功能。
 
 ## 支持的 IDE
 

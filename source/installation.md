@@ -38,26 +38,27 @@
 
 ## 安装 VS 代码插件
 
-=== "market"
+=== "插件市场"
 
-    1. Open VS Code and go to `Extensions` by click the <img src='../img/icons/vs-code-icon.jpg' width="20" /> icon
-    2. Input `Nocalhost` in the search box
-    3. Select the `Nocalhost Extension`, and click the **Install** button.
+    1. 打开VS Code，点击 <img src='../img/icons/vs-code-icon.jpg' width="20" /> 图标，进入`Extensions`
+    2. 在搜索框中输入`Nocalhost`
+    3. 选择`Nocalhost Extension`，然后点击 **Install** 按钮。
 
     ![从VS代码扩展市场安装](./img/installation/vscode-market.png)
 
-=== "manual"
+=== "手动安装"
 
-    1. Download the latest version from our [Github Repo](https://github.com/nocalhost/nocalhost-vscode-plugin/releases/latest)
-    2. Open VS Code and go to `Extensions` by click the <img src='../img/icons/vs-code-icon.jpg' width="20" /> icon
-    3. Click <img src='../img/icons/cluster-action-icon.jpg' width="20" /> on the top right of the `Extension` list, select `Install from VSIX...`, select the `VSIX` downloaded above
-    4. Download the latest nhctl from out [Github Repo](https://github.com/nocalhost/nocalhost/releases), and put it under `~/.nh/bin/` then named nhctl, you need to give this binary execution permission (chmod +x ./nhctl). (the path is %homepath%/.nh/bin/ in windows, and the binary named 'nhctl.exe', no need to grant additional execution permissions under windows)
+    1. 从我们的[Github Repo](https://github.com/nocalhost/nocalhost-vscode-plugin/releases/latest)下载最新版本
+    2. 打开VS Code，点击<img src='../img/icons/vs-code-icon.jpg' width="20" />图标，进入 `Extensions`
+    3. 点击`Extension`列表右上方的<img src='../img/icons/cluster-action-icon.jpg' width="20" />，选择`Install from VSIX…`，选择上文下载的`VSIX`
+    4. 从[Github Repo](https://github.com/nocalhost/nocalhost/releases)下载最新的nhctl，并把它放在`~/.nh/bin/`下，然后命名为nhctl，你需要给这个二进制执行权限(`chmod +x ./nhctl`)。
+       (windows下的路径是`%homepath%/.nh/bin/`，二进制文件名为`nhctl.exe`，不需要在windows下授予额外的执行权限)
 
     ![手动安装](./img/installation/vs-manual.jpg)
 
 ## 安装 Jetbrains 插件
 
-=== "market"
+=== "插件市场"
 
     #### Windows
 
@@ -69,11 +70,11 @@
 
     ![从喷气桥扩展市场安装](./img/installation/jb-market.png)
 
-=== "manual"
+=== "手动安装"
 
-    1. Download the latest version from our [Github Repo](https://github.com/nocalhost/nocalhost-intellij-plugin/releases/latest)
-    2. Install plugin: <kbd>Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Install from disk... </kbd>
-    3. Download the latest nhctl from out [Github Repo](https://github.com/nocalhost/nocalhost/releases), and put it under `~/.nh/bin/` then named nhctl, you need to give this binary execution permission (chmod +x ./nhctl). (the path is %homepath%/.nh/bin/ in windows, and the binary named 'nhctl.exe', no need to grant additional execution permissions under windows)
+    1. 从我们的[GitHub Repo](https://github.com/nocalhost/nocalhost-intellij-plugin/releases/latest)下载最新版本
+    2. 安装插件: <kbd>Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Install from disk... </kbd>
+    3. 从[GitHub Repo](https://github.com/nocalhost/nocalhost/releases)下载最新的NHCTL, 并把它放在 `~/.nh/bin/` 然后命名为 nhctl, 您需要授予此二进制执行权限 (chmod +x ./nhctl). (在Windows中路径是 %homepath%/.nh/bin/ , 和二进制命名 'nhctl.exe', 无需授予Windows下的额外执行权限)
 
     ![手动安装](./img/installation/jb-manual.jpg)
 
