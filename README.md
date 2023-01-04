@@ -1,41 +1,41 @@
 # Nocalhost Docs & Website
 
-> 由于使用 @docusaurus 构建特别复杂，需要安装繁多的 Js 开发组件，经常有安装连接失败，已经组件升级导致各种兼容问题，很难调试，
+> 由于使用 @docusaurus 构建特别复杂，需要安装繁多的 Js 开发组件，经常有安装连接失败，以及组件升级导致各种兼容问题，很难调试，
 > 最后改用快速高效 mkdocs
 
-This repository contains the source code of Nocalhost website and all documentations. It's built by [Docusaurus 2](https://docusaurus.io/).
+该存储库包含 Nocalhost 网站和所有文档的源代码。它由[Docusaurus 2](https://docusaurus.io/)建造.
 
-## Preview
+## 预习
 
-Clone the repository to your local workstation.
+克隆存储库到您当地的工作站。
 
-### Installation
+### 安装
 
 ```bash
 npm install
 ```
 
-### Local Development
+### 本地开发
 
 ```bash
 npm run start
 ```
 
-This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
+此命令启动本地开发服务器并打开浏览器窗口。大多数更改无需重新启动服务器即可反映。
 
-### Build
+### 构建
 
 ```bash
 npm run build
 ```
 
-This command generates static content into the build directory and can be served using any static contents hosting service.
+此命令将静态内容生成构建目录，并可以使用任何静态内容托管服务提供服务。
 
-## Add or Update Docs
+## 添加或更新文档
 
-When you add or modify the docs, these three files(`docs`, `static` and `sidebars.js`) should be taken into consideration.
+当你添加或修改文档时，这三个文件(`docs`, `static` and `sidebars.js`)应该被考虑在内。
 
-1. `docs/`, the main English documentation files are mainly located in this folder. All markdown files need to follow the format, that the title at the beginning should be in the following format:
+1. `docs/`, 主要的英文文档文件主要位于这个文件夹中。所有 markdown 文件需要遵循的格式，在开始的标题应该是以下格式:
 
 ```yaml
 ---
@@ -43,7 +43,7 @@ title: Title Name
 ---
 ```
 
-2. `static`, contains all the static files like image, stylesheet and fonts. We are using mdx format for image resources, please read [the official docs of docusaurus](https://docusaurus.io/docs/markdown-features) to lean the markdown features.
+2. `static`, 包含所有静态文件，如图像，样式表和字体。我们使用 mdx 格式的图片资源，请阅读【docusaurus 官方文档】(https://docusaurus.io/docs/markdown-features)了解降价功能。
 
 ```md
 <figure className="img-frame">
@@ -52,7 +52,7 @@ title: Title Name
 </figure>
 ```
 
-3. `sidebars.js`, this file contain the navigation information of the KubeVela website. Please read [the official docs of docusaurus](https://docusaurus.io/docs/sidebar) to learn how to write `sidebar.js`.
+3. `sidebars.js`, 该文件包含 KubeVela 网站的导航信息。请阅读[docusaurus 的官方文档](https://docusaurus.io/docs/sidebar)，学习如何编写`sidebar.js`。
 
 ```json
     {
